@@ -1,0 +1,44 @@
+.container {
+  padding: 0 24px;
+}
+.trainer-question {
+  justify-content: center;
+  background-color: rgb(65, 150, 204);
+  min-height: 200px;
+  color: white;
+}
+.trainer-question > div {
+  font-size: 150%;
+  align-self: center;
+}
+
+div {
+  text-align: center;
+}
+.app-image {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.text {
+  text-align: left;
+  word-break: break-all;
+}
+.trainer-image {
+  width: 20%;
+  object-fit: scale-down;
+  border-radius: 50%;
+  z-index: 2;
+}
+.text-wrapper {
+  background-color: rgb(65, 150, 204);
+  color: white;
+  width: 100%;
+  padding-left: 100px;
+  margin-left: -80px;
+}
+button {
+  color: white;
+  background-color: rgb(65, 150, 204);
+  font-size: 150%;
+}

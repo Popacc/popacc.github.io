@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Montserrat, sans-serif'
+);
+
+@include mat-core($custom-typography);
+
+$light-app-primary: mat-pallete($mat-red, 400);
+$light-app-primary: mat-pallete();
+
+$light-app-warn: mat-pallete();
+
+@include angular-material-theme($light-app-theme);

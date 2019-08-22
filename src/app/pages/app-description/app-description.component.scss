@@ -1,0 +1,35 @@
+.container {
+  padding: 0 24px;
+}
+.app-questions {
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: rgb(65, 150, 204);
+  min-height: 200px;
+  vertical-align: center;
+  color: white;
+}
+.text1 {
+  font-size: 150%;
+  align-self: center;
+}
+
+.item {
+  width: 100%;
+}
+.item > img {
+  width: 20%;
+  object-fit: scale-down;
+}
+.app-answers {
+  justify-content: space-between;
+}
+.text {
+  text-align: justify;
+  text-justify: auto;
+  word-break: break-all;
+  text-align: center;
+}
+.title {
+  font-size: 500%;
+}

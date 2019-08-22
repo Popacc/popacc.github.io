@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: white;
+}
+* {
+  // font-family: Muli, Arial, Helvetica, sans-serif !important;
+  font-family: 'Montserrat', sans-serif;
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+.page {
+  color: white;
+  padding: 24px 48px;
+}
+.mat-form-field-label {
+  color: #0d0d0d !important;
+}
+.mat-form-field-underline {
+  background-color: white !important;
+}
+.mat-form-field {
+  background-color: white;
+  font-size: 120%;
+}
+// primary color #EE506F
+// blue #408EBF
+// light blue #3F9BBF
+// greenish #80BEB9
+// black #0D0D0D
+@media all and (max-width: 1275px) {
+  .page {
+    padding: 24px 6px !important;
+  }
+}

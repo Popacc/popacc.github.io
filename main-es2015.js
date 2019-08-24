@@ -67,6 +67,17 @@ module.exports = "<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"space-b
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/new-user-snackbar/new-user-snackbar.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/new-user-snackbar/new-user-snackbar.component.html ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n <img src=\"../../../assets/images/strongmen.jpg\" alt=\"Slika\"/>\n  <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <span >Petar, Beograd</span>\n    <span>Upravo kreirao/la nalog</span>\n  </div>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/prices/prices.component.html":
 /*!******************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/prices/prices.component.html ***!
@@ -210,6 +221,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_countdown__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-countdown */ "./node_modules/ngx-countdown/fesm2015/ngx-countdown.js");
 /* harmony import */ var _pages_first_page_first_page_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/first-page/first-page.component */ "./src/app/pages/first-page/first-page.component.ts");
 /* harmony import */ var _pages_second_page_second_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/second-page/second-page.component */ "./src/app/pages/second-page/second-page.component.ts");
+/* harmony import */ var _pages_new_user_snackbar_new_user_snackbar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/new-user-snackbar/new-user-snackbar.component */ "./src/app/pages/new-user-snackbar/new-user-snackbar.component.ts");
+
 
 
 
@@ -239,7 +252,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_strongman_strongman_component__WEBPACK_IMPORTED_MODULE_11__["StrongmanComponent"],
             _pages_prices_prices_component__WEBPACK_IMPORTED_MODULE_12__["PricesComponent"],
             _pages_first_page_first_page_component__WEBPACK_IMPORTED_MODULE_15__["FirstPageComponent"],
-            _pages_second_page_second_page_component__WEBPACK_IMPORTED_MODULE_16__["SecondPageComponent"]
+            _pages_second_page_second_page_component__WEBPACK_IMPORTED_MODULE_16__["SecondPageComponent"],
+            _pages_new_user_snackbar_new_user_snackbar_component__WEBPACK_IMPORTED_MODULE_17__["NewUserSnackbarComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -250,6 +264,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
             ngx_countdown__WEBPACK_IMPORTED_MODULE_14__["CountdownModule"]
         ],
+        entryComponents: [_pages_new_user_snackbar_new_user_snackbar_component__WEBPACK_IMPORTED_MODULE_17__["NewUserSnackbarComponent"]],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
@@ -280,7 +295,8 @@ const MaterialComponents = [
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatDividerModule"]
+    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatDividerModule"],
+    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatSnackBarModule"]
 ];
 let MaterialModule = class MaterialModule {
 };
@@ -361,12 +377,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _new_user_snackbar_new_user_snackbar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../new-user-snackbar/new-user-snackbar.component */ "./src/app/pages/new-user-snackbar/new-user-snackbar.component.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
 
 
 
 let FirstPageComponent = class FirstPageComponent {
-    constructor(sanitizer) {
+    constructor(sanitizer, snackBar) {
         this.sanitizer = sanitizer;
+        this.snackBar = snackBar;
         this.videoURL = 'https://www.youtube.com/embed/PzkiNG-DS18';
         this.users = [
             {
@@ -378,10 +401,18 @@ let FirstPageComponent = class FirstPageComponent {
         ];
         this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoURL);
     }
-    ngOnInit() { }
+    openSnackBar() {
+        this.snackBar.openFromComponent(_new_user_snackbar_new_user_snackbar_component__WEBPACK_IMPORTED_MODULE_4__["NewUserSnackbarComponent"], {
+            duration: 2000,
+        });
+    }
+    ngOnInit() {
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["interval"])(10000).subscribe(x => this.openSnackBar());
+    }
 };
 FirstPageComponent.ctorParameters = () => [
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"] }
 ];
 FirstPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -432,6 +463,48 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/pages/header/header.component.scss")]
     })
 ], HeaderComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/new-user-snackbar/new-user-snackbar.component.scss":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/new-user-snackbar/new-user-snackbar.component.scss ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "img {\n  width: 70px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n  border-radius: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbmV3LXVzZXItc25hY2tiYXIvQzpcXFVzZXJzXFxOZW1hbmphXFxEb2N1bWVudHNcXEdpdCBQcm9qZWN0c1xcYW5ndWxhci1wcm9qZWN0c1xcdHJhaW4tbWUtb25saW5lL3NyY1xcYXBwXFxwYWdlc1xcbmV3LXVzZXItc25hY2tiYXJcXG5ldy11c2VyLXNuYWNrYmFyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9uZXctdXNlci1zbmFja2Jhci9uZXctdXNlci1zbmFja2Jhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLFdBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO0VBQ0EsbUJBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL25ldy11c2VyLXNuYWNrYmFyL25ldy11c2VyLXNuYWNrYmFyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmltZyB7XHJcbiAgICB3aWR0aDogNzBweDtcclxuICAgIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG59IiwiaW1nIHtcbiAgd2lkdGg6IDcwcHg7XG4gIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/new-user-snackbar/new-user-snackbar.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/new-user-snackbar/new-user-snackbar.component.ts ***!
+  \************************************************************************/
+/*! exports provided: NewUserSnackbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewUserSnackbarComponent", function() { return NewUserSnackbarComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let NewUserSnackbarComponent = class NewUserSnackbarComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+NewUserSnackbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-new-user-snackbar',
+        template: __webpack_require__(/*! raw-loader!./new-user-snackbar.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/new-user-snackbar/new-user-snackbar.component.html"),
+        styles: [__webpack_require__(/*! ./new-user-snackbar.component.scss */ "./src/app/pages/new-user-snackbar/new-user-snackbar.component.scss")]
+    })
+], NewUserSnackbarComponent);
 
 
 

@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" fxLayout=\"column\">\r\n  <app-header></app-header>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<div class=\"container\" fxLayout=\"column\">\r\n  <app-header></app-header>\r\n  <app-first-page></app-first-page>\r\n  <app-second-page></app-second-page>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -45,6 +45,17 @@ module.exports = "<div fxLayout=\"column\" fxLayoutGap=\"48px\">\r\n  <div\r\n  
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/first-page/first-page.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/first-page/first-page.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div\n  fxLayout=\"column\"\n  class=\"first-page page\"\n>\n  <div fxLayoutAlign=\"flex-start center\">\n    <div class=\"mat-display-3\" fxFlex=\"45%\">\n      Kako od jednog do <b>2000</b> klijenata?\n    </div>\n  </div>\n\n  <div\n    fxLayout=\"row\"\n    fxLayoutAlign=\"center start\"\n    fxLayoutAlign.lt-lg=\"center\"\n    fxLayoutGap=\"48px\"\n    fxLayout.lt-lg=\"column\"\n  >\n    <div\n      fxLayout=\"column\"\n      fxFlex=\"40%\"\n      fxLayoutAlign=\"center center\"\n      fxLayoutGap=\"48px\"\n      fxLayoutGap.lt-lg=\"6px\"\n    >\n      <iframe [src]=\"safeURL\" frameborder=\"0\" allowfullscreen></iframe>\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"60%\" fxLayoutGap=\"12px\">\n      <div fxLayout=\"row\" class=\"mat-display-1 text-list\">\n        <mat-icon matListIcon class=\"mat-display-2\">check_box</mat-icon>\n        Da li još uvek misliš da je nemoguće trenirati više od 10 klijenata\n        dnevno?\n      </div>\n      <div fxLayout=\"row\" class=\"mat-display-1 text-list\">\n        <mat-icon matListIcon class=\"mat-display-2\">check_box</mat-icon>\n        Da broj tvojih radnih sati definiše tvoje prihode? <br />Da se posao\n        trenera isplati samo u inostranstvu?\n      </div>\n      <div fxLayout=\"row\" class=\"mat-display-1 text-list\">\n        <mat-icon matListIcon class=\"mat-display-2\">check_box</mat-icon>\n        NE MORA VIŠE TAKO!<br />\n        NE MORA NAPORNIJE, MOŽE PAMETNIJE.\n      </div>\n      <div fxLayout=\"row\" class=\"mat-display-1 text-list\">\n        <mat-icon matListIcon class=\"mat-display-2\">check_box</mat-icon>\n        Moj-trening je aplikacija koja ti omogućava postavljanje treninga i\n        ishrane u samo 2 koraka i sada je možeš isprobati potpuno BESPLATNO 30\n        dana!\n      </div>\n    </div>\n  </div>\n  <div\n    fxLayout=\"row\"\n    fxLayout.lt-lg=\"column\"\n    fxLayoutAlign=\"flex-start start\"\n    fxLayoutGap=\"48px\"\n    class=\"form\"\n  >\n    <div class=\"mat-display-1 warn\" fxFlex=\"40%\" fxLayout=\"column\">\n      POŽURITE! <br />PONUDA ISTIČE USKORO\n      <countdown\n        [config]=\"{ leftTime: 360 * 60 }\"\n        class=\"mat-display-3 countdown\"\n        >$!h!h:$!m!m:$!s!s</countdown\n      >\n    </div>\n    <form\n      fxLayout=\"column\"\n      fxFlex=\"60%\"\n      fxLayoutGap=\"12px\"\n      fxFlex.lt-lg=\"100%\"\n      fxLayoutAlign.lt-lg=\"center center\"\n    >\n      <mat-form-field floatLabel=\"never\">\n        <input matInput placeholder=\"Unesite svoje ime...\" />\n      </mat-form-field>\n      <mat-form-field floatLabel=\"never\">\n        <input matInput placeholder=\"Unesite svoj mejl...\" />\n      </mat-form-field>\n      <button mat-flat-button class=\"pulse-button\">\n        Kreirajte nalog\n      </button>\n    </form>\n  </div>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/header/header.component.html":
 /*!******************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/header/header.component.html ***!
@@ -52,18 +63,7 @@ module.exports = "<div fxLayout=\"column\" fxLayoutGap=\"48px\">\r\n  <div\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"space-between\">\r\n  <!-- fxLayout=\"row\"\r\n  fxLayoutAlign=\"space-between center\"\r\n  fxLayout.lt-lg=\"column\"\r\n  fxLayoutGap.lt-lg=\"6px\" -->\r\n  <div class=\"header-logo-container\">\r\n    <img\r\n      src=\"../../../assets/images/logo.svg\"\r\n      class=\"header-logo\"\r\n      alt=\"Logotip\"\r\n    />\r\n  </div>\r\n  <!-- fxFlexOrder.lt-lg=\"2\" -->\r\n\r\n  <!-- fxFlexOrder.lt-lg=\"1\" -->\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <button mat-raised-button>Uloguj se</button>\r\n  </div>\r\n</mat-toolbar>\r\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/pages/main-page/main-page.component.html":
-/*!************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/pages/main-page/main-page.component.html ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"main-container\" fxLayout=\"column\">\r\n  <div\r\n    fxLayout=\"column\"\r\n    fxLayoutGap=\"24px\"\r\n    fxLayoutGap.lt-lg=\"2px\"\r\n    class=\"first-page page\"\r\n  >\r\n    <div fxLayoutAlign=\"flex-start center\">\r\n      <div class=\"mat-display-3 text\" fxFlex=\"45%\">\r\n        Kako od jednog do <b>2000</b> klijenata?\r\n      </div>\r\n    </div>\r\n\r\n    <div\r\n      fxLayout=\"row\"\r\n      fxLayoutAlign=\"center start\"\r\n      fxLayoutAlign.lt-lg=\"center\"\r\n      fxLayoutGap=\"48px\"\r\n      fxLayout.lt-lg=\"column\"\r\n    >\r\n      <div\r\n        fxLayout=\"column\"\r\n        fxFlex=\"40%\"\r\n        fxLayoutAlign=\"center center\"\r\n        fxLayoutGap=\"48px\"\r\n        fxLayoutGap.lt-lg=\"6px\"\r\n      >\r\n        <iframe [src]=\"safeURL\" frameborder=\"0\" allowfullscreen></iframe>\r\n      </div>\r\n      <div fxLayout=\"column\" fxFlex=\"60%\">\r\n        <div fxLayout=\"row\" class=\"mat-display-1\">\r\n          <mat-icon matListIcon class=\"mat-display-2\">check</mat-icon>\r\n          Da li još uvek misliš da je nemoguće trenirati više od 10 klijenata\r\n          dnevno?\r\n        </div>\r\n        <div fxLayout=\"row\" class=\"mat-display-1\">\r\n          <mat-icon matListIcon class=\"mat-display-2\">check</mat-icon>\r\n          Da broj tvojih radnih sati definiše tvoje prihode? <br />Da se posao\r\n          trenera isplati samo u inostranstvu?\r\n        </div>\r\n        <div fxLayout=\"row\" class=\"mat-display-1\">\r\n          <mat-icon matListIcon class=\"mat-display-2\">check</mat-icon>\r\n          NE MORA VIŠE TAKO!<br />\r\n          NE MORA NAPORNIJE, MOŽE PAMETNIJE.\r\n        </div>\r\n        <div fxLayout=\"row\" class=\"mat-display-1\">\r\n          <mat-icon matListIcon class=\"mat-display-2\">check</mat-icon>\r\n          Moj-trening je aplikacija koja ti omogućava postavljanje treninga i\r\n          ishrane u samo 2 koraka i sada je možeš isprobati potpuno BESPLATNO 30\r\n          dana!\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div\r\n      fxLayout=\"row\"\r\n      fxLayout.lt-lg=\"column\"\r\n      fxLayoutAlign=\"flex-start start\"\r\n      fxLayoutGap=\"48px\"\r\n      class=\"form\"\r\n    >\r\n      <div class=\"mat-display-1 warn\" fxFlex=\"40%\" fxLayout=\"column\">\r\n        POŽURITE! <br />AKCIJA ISTIČE USKORO\r\n        <countdown\r\n          [config]=\"{ leftTime: 360 * 60 }\"\r\n          class=\"mat-display-3 countdown\"\r\n          >$!h!h:$!m!m:$!s!s</countdown\r\n        >\r\n      </div>\r\n      <form\r\n        fxLayout=\"column\"\r\n        fxFlex=\"60%\"\r\n        fxLayoutGap=\"12px\"\r\n        fxFlex.lt-lg=\"100%\"\r\n        fxLayoutAlign.lt-lg=\"center center\"\r\n      >\r\n        <mat-form-field floatLabel=\"never\">\r\n          <input matInput placeholder=\"Unesite svoje ime...\" />\r\n        </mat-form-field>\r\n        <mat-form-field floatLabel=\"never\">\r\n          <input matInput placeholder=\"Unesite svoj mejl...\" />\r\n        </mat-form-field>\r\n        <button mat-flat-button class=\"pulse-button\">\r\n          Kreirajte nalog\r\n        </button>\r\n      </form>\r\n    </div>\r\n  </div>\r\n  <app-strongman-first-text></app-strongman-first-text>\r\n  <!-- <app-app-description></app-app-description>\r\n  <app-trainers></app-trainers>\r\n  <app-strongman></app-strongman>\r\n  <app-prices></app-prices> -->\r\n</div>\r\n"
+module.exports = "<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"space-between\">\r\n  <div class=\"header-logo-container\">\r\n    <img\r\n      src=\"../../../assets/images/logo.svg\"\r\n      class=\"header-logo\"\r\n      alt=\"Logotip\"\r\n    />\r\n  </div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\r\n    <button mat-raised-button>Uloguj se</button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -78,14 +78,14 @@ module.exports = "<div fxLayout=\"column\" fxLayoutGap=\"48px\">\r\n  <div class
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/pages/strongman-first-text/strongman-first-text.component.html":
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/pages/strongman-first-text/strongman-first-text.component.html ***!
-  \**********************************************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/second-page/second-page.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/second-page/second-page.component.html ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"second-page\">\r\n  <div class=\"second-page-image-wrapper\"></div>\r\n  <div fxLayoutAlign=\"flex-end\" class=\"second-page-text\">\r\n    <div fxFlex=\"55%\" fxLayout=\"column\" fxFlex.lt-lg=\"100%\">\r\n      <div class=\"mat-display-3\">Namučio sam se u početku</div>\r\n      <div class=\"text\" class=\"mat-display-1\">\r\n        <p>\r\n          Da vas zainteresujem... Ja sam onaj bajča što ima par hiljada onlajn\r\n          klijenata, a do pre par godina sam bio drvo, ali baš apsolutno drvo za\r\n          onlajn biznis. U početku sam lomio glavu kako da nađem klijente, a\r\n          posle mnogo objavljenih before after fotografija mojih klijenata i\r\n          edukativnih postova kad je krenulo nisam mogao da pohvatam kome pišem\r\n          na viber, kome šaljem pdf na email a kome u mesindžeru video sa\r\n          tehnikom izvođenja.\r\n        </p>\r\n        <p>\r\n          Da budem iskren nisam imao jasan plan. Znao sam samo da moram da radim\r\n          i da se trudim. Jedna stvar je povukla drugu, pa je došla treća... I\r\n          sad sam Kardašijan onlajn biznisa za trenere. Ne mislim na veličinu\r\n          zadnjice. Iako imam najveći stomak (nikad pločice) imam impozantan\r\n          broj klijenata. Kako?\r\n        </p>\r\n      </div>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"center\" fxLayoutAlign=\"center center\">\r\n        <button mat-flat-button>Nastavi sa čitanjem</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"page\">\n    <div class=\"second-page-image-wrapper\"></div>\n    <div fxLayoutAlign=\"flex-end\" class=\"second-page-text\">\n      <div fxFlex=\"55%\" fxLayout=\"column\" fxFlex.lt-lg=\"100%\">\n        <div class=\"mat-display-3\">Namučio sam se u početku</div>\n        <div class=\"text\" class=\"mat-display-1\">\n          <p>\n            Da vas zainteresujem... Ja sam onaj bajča što ima par hiljada onlajn\n            klijenata, a do pre par godina sam bio drvo, ali baš apsolutno drvo za\n            onlajn biznis. U početku sam lomio glavu kako da nađem klijente, a\n            posle mnogo objavljenih before after fotografija mojih klijenata i\n            edukativnih postova kad je krenulo nisam mogao da pohvatam kome pišem\n            na viber, kome šaljem pdf na email a kome u mesindžeru video sa\n            tehnikom izvođenja.\n          </p>\n          <p>\n            Da budem iskren nisam imao jasan plan. Znao sam samo da moram da radim\n            i da se trudim. Jedna stvar je povukla drugu, pa je došla treća... I\n            sad sam Kardašijan onlajn biznisa za trenere. Ne mislim na veličinu\n            zadnjice. Iako imam najveći stomak (nikad pločice) imam impozantan\n            broj klijenata. Kako?\n          </p>\n        </div>\n        <div fxLayout=\"row\" fxLayoutAlign=\"center\" fxLayoutAlign=\"center center\" fxFlex=\"100%\">\n          <button mat-flat-button>Nastavi sa čitanjem</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  "
 
 /***/ }),
 
@@ -124,12 +124,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _pages_main_page_main_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/main-page/main-page.component */ "./src/app/pages/main-page/main-page.component.ts");
 
 
 
-
-var routes = [{ path: '', component: _pages_main_page_main_page_component__WEBPACK_IMPORTED_MODULE_3__["MainPageComponent"] }];
+var routes = [];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -153,7 +151,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  width: 100%;\n  margin: 0 auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxOZW1hbmphXFxEb2N1bWVudHNcXEdpdCBQcm9qZWN0c1xcYW5ndWxhci1wcm9qZWN0c1xcdHJhaW4tbWUtb25saW5lL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7RUFDQSxjQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBtYXJnaW46IDAgYXV0bztcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcclxuICAuY29udGFpbmVyIHtcclxuICB9XHJcbn1cclxuIiwiLmNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDAgYXV0bztcbn0iXX0= */"
+module.exports = ".container {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxOZW1hbmphXFxEb2N1bWVudHNcXEdpdCBQcm9qZWN0c1xcYW5ndWxhci1wcm9qZWN0c1xcdHJhaW4tbWUtb25saW5lL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtYXJnaW46IDA7XHJcbiAgcGFkZGluZzogMDtcclxufVxyXG5cclxuIiwiLmNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -204,18 +202,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_main_page_main_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/main-page/main-page.component */ "./src/app/pages/main-page/main-page.component.ts");
-/* harmony import */ var _pages_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/header/header.component */ "./src/app/pages/header/header.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _modules_material_material_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/material/material.module */ "./src/app/modules/material/material.module.ts");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _pages_app_description_app_description_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/app-description/app-description.component */ "./src/app/pages/app-description/app-description.component.ts");
-/* harmony import */ var _pages_trainers_trainers_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/trainers/trainers.component */ "./src/app/pages/trainers/trainers.component.ts");
-/* harmony import */ var _pages_strongman_strongman_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/strongman/strongman.component */ "./src/app/pages/strongman/strongman.component.ts");
-/* harmony import */ var _pages_prices_prices_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/prices/prices.component */ "./src/app/pages/prices/prices.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var ngx_countdown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-countdown */ "./node_modules/ngx-countdown/fesm5/ngx-countdown.js");
-/* harmony import */ var _pages_strongman_first_text_strongman_first_text_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/strongman-first-text/strongman-first-text.component */ "./src/app/pages/strongman-first-text/strongman-first-text.component.ts");
+/* harmony import */ var _pages_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/header/header.component */ "./src/app/pages/header/header.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _modules_material_material_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/material/material.module */ "./src/app/modules/material/material.module.ts");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _pages_app_description_app_description_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/app-description/app-description.component */ "./src/app/pages/app-description/app-description.component.ts");
+/* harmony import */ var _pages_trainers_trainers_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/trainers/trainers.component */ "./src/app/pages/trainers/trainers.component.ts");
+/* harmony import */ var _pages_strongman_strongman_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/strongman/strongman.component */ "./src/app/pages/strongman/strongman.component.ts");
+/* harmony import */ var _pages_prices_prices_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/prices/prices.component */ "./src/app/pages/prices/prices.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_countdown__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-countdown */ "./node_modules/ngx-countdown/fesm5/ngx-countdown.js");
+/* harmony import */ var _pages_first_page_first_page_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/first-page/first-page.component */ "./src/app/pages/first-page/first-page.component.ts");
+/* harmony import */ var _pages_second_page_second_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/second-page/second-page.component */ "./src/app/pages/second-page/second-page.component.ts");
 
 
 
@@ -240,22 +238,22 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _pages_main_page_main_page_component__WEBPACK_IMPORTED_MODULE_5__["MainPageComponent"],
-                _pages_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
-                _pages_app_description_app_description_component__WEBPACK_IMPORTED_MODULE_10__["AppDescriptionComponent"],
-                _pages_trainers_trainers_component__WEBPACK_IMPORTED_MODULE_11__["TrainersComponent"],
-                _pages_strongman_strongman_component__WEBPACK_IMPORTED_MODULE_12__["StrongmanComponent"],
-                _pages_prices_prices_component__WEBPACK_IMPORTED_MODULE_13__["PricesComponent"],
-                _pages_strongman_first_text_strongman_first_text_component__WEBPACK_IMPORTED_MODULE_16__["StrongmanFirstTextComponent"]
+                _pages_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
+                _pages_app_description_app_description_component__WEBPACK_IMPORTED_MODULE_9__["AppDescriptionComponent"],
+                _pages_trainers_trainers_component__WEBPACK_IMPORTED_MODULE_10__["TrainersComponent"],
+                _pages_strongman_strongman_component__WEBPACK_IMPORTED_MODULE_11__["StrongmanComponent"],
+                _pages_prices_prices_component__WEBPACK_IMPORTED_MODULE_12__["PricesComponent"],
+                _pages_first_page_first_page_component__WEBPACK_IMPORTED_MODULE_15__["FirstPageComponent"],
+                _pages_second_page_second_page_component__WEBPACK_IMPORTED_MODULE_16__["SecondPageComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
-                _modules_material_material_module__WEBPACK_IMPORTED_MODULE_8__["MaterialModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_14__["HttpClientModule"],
-                ngx_countdown__WEBPACK_IMPORTED_MODULE_15__["CountdownModule"]
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+                _modules_material_material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_8__["FlexLayoutModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
+                ngx_countdown__WEBPACK_IMPORTED_MODULE_14__["CountdownModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -287,16 +285,9 @@ __webpack_require__.r(__webpack_exports__);
 var MaterialComponents = [
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatSidenavModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatListModule"],
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
     _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatRadioModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatDialogModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatPaginatorModule"],
-    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatSnackBarModule"]
+    _angular_material___WEBPACK_IMPORTED_MODULE_2__["MatDividerModule"]
 ];
 var MaterialModule = /** @class */ (function () {
     function MaterialModule() {
@@ -358,6 +349,65 @@ var AppDescriptionComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/first-page/first-page.component.scss":
+/*!************************************************************!*\
+  !*** ./src/app/pages/first-page/first-page.component.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".first-page {\n  background-color: #408ebf;\n}\n\niframe {\n  width: 100%;\n  height: 100%;\n  min-height: 400px;\n}\n\n.mat-display-1,\n.mat-display-2,\n.mat-display-3 {\n  margin-bottom: 12px;\n}\n\n.warn {\n  color: #ee506f;\n  font-weight: bolder;\n  text-align: center;\n  width: 100%;\n  line-height: 25px;\n}\n\nmat-form-field,\nbutton {\n  width: 60%;\n  height: 10vh;\n  color: black;\n  text-align: center;\n  vertical-align: middle;\n}\n\nbutton {\n  font-size: 110%;\n  background-color: #ee506f;\n  color: white;\n}\n\n.countdown {\n  color: white;\n}\n\nform {\n  width: 100%;\n  margin-left: 55px;\n}\n\ncountdown {\n  letter-spacing: 2px;\n}\n\nmat-icon {\n  padding-right: 32px;\n}\n\n@-webkit-keyframes pulse {\n  25% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.03);\n  }\n}\n\n@keyframes pulse {\n  25% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.03);\n  }\n}\n\n.pulse-button {\n  -webkit-animation: pulse 1s ease-in-out infinite;\n  animation: pulse 1s ease-in-out infinite;\n}\n\n.pulse-button:hover {\n  -webkit-animation: none;\n  animation: none;\n}\n\n@media all and (max-width: 1280px) {\n  mat-form-field,\nbutton {\n    width: 90%;\n    justify-items: center;\n    font-size: 150%;\n  }\n\n  .mat-display-1,\n.mat-display-2 {\n    font-size: 150% !important;\n    margin-bottom: 12px;\n  }\n\n  .mat-display-3 {\n    font-size: 8vw !important;\n    margin-bottom: 12px;\n    min-width: 100%;\n    text-align: center;\n    line-height: 8vw;\n  }\n\n  form {\n    margin: 0;\n  }\n}\n\n@media all and (max-width: 420px) {\n  .text-list {\n    line-height: 7vw !important;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmlyc3QtcGFnZS9DOlxcVXNlcnNcXE5lbWFuamFcXERvY3VtZW50c1xcR2l0IFByb2plY3RzXFxhbmd1bGFyLXByb2plY3RzXFx0cmFpbi1tZS1vbmxpbmUvc3JjXFxhcHBcXHBhZ2VzXFxmaXJzdC1wYWdlXFxmaXJzdC1wYWdlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9maXJzdC1wYWdlL2ZpcnN0LXBhZ2UuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBQTtBQ0NGOztBREVBO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ0NGOztBREVBOzs7RUFHRSxtQkFBQTtBQ0NGOztBRElBO0VBQ0UsY0FBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7QUNERjs7QURHQTs7RUFFRSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLHNCQUFBO0FDQUY7O0FERUE7RUFDRSxlQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxZQUFBO0FDRUY7O0FEQUE7RUFDRSxXQUFBO0VBQ0EsaUJBQUE7QUNHRjs7QUREQTtFQUNFLG1CQUFBO0FDSUY7O0FERkE7RUFDRSxtQkFBQTtBQ0tGOztBREZBO0VBQ0U7SUFDRSxtQkFBQTtFQ0tGO0VESEE7SUFDRSxzQkFBQTtFQ0tGO0FBQ0Y7O0FEWEE7RUFDRTtJQUNFLG1CQUFBO0VDS0Y7RURIQTtJQUNFLHNCQUFBO0VDS0Y7QUFDRjs7QURIQTtFQUNFLGdEQUFBO0VBR0Esd0NBQUE7QUNLRjs7QURIQTtFQUNFLHVCQUFBO0VBR0EsZUFBQTtBQ01GOztBREhBO0VBQ0U7O0lBRUUsVUFBQTtJQUNBLHFCQUFBO0lBQ0EsZUFBQTtFQ01GOztFREpBOztJQUVFLDBCQUFBO0lBQ0EsbUJBQUE7RUNPRjs7RURMQTtJQUNFLHlCQUFBO0lBQ0EsbUJBQUE7SUFDQSxlQUFBO0lBQ0Esa0JBQUE7SUFDQSxnQkFBQTtFQ1FGOztFRExBO0lBQ0UsU0FBQTtFQ1FGO0FBQ0Y7O0FETEE7RUFDRTtJQUNFLDJCQUFBO0VDT0Y7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZpcnN0LXBhZ2UvZmlyc3QtcGFnZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5maXJzdC1wYWdlIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDA4ZWJmO1xyXG59XHJcblxyXG5pZnJhbWUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiA0MDBweDtcclxufVxyXG5cclxuLm1hdC1kaXNwbGF5LTEsXHJcbi5tYXQtZGlzcGxheS0yLFxyXG4ubWF0LWRpc3BsYXktMyB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTJweDtcclxufVxyXG5cclxuXHJcblxyXG4ud2FybiB7XHJcbiAgY29sb3I6ICNlZTUwNmY7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgbGluZS1oZWlnaHQ6MjVweDtcclxufVxyXG5tYXQtZm9ybS1maWVsZCxcclxuYnV0dG9uIHtcclxuICB3aWR0aDogNjAlO1xyXG4gIGhlaWdodDogMTB2aDtcclxuICBjb2xvcjogYmxhY2s7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbn1cclxuYnV0dG9uIHtcclxuICBmb250LXNpemU6IDExMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlNTA2ZjtcclxuICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmNvdW50ZG93biB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcbmZvcm0ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1sZWZ0OiA1NXB4O1xyXG59XHJcbmNvdW50ZG93biB7XHJcbiAgbGV0dGVyLXNwYWNpbmc6IDJweDtcclxufVxyXG5tYXQtaWNvbiB7XHJcbiAgcGFkZGluZy1yaWdodDogMzJweDtcclxufVxyXG5cclxuQGtleWZyYW1lcyBwdWxzZSB7XHJcbiAgMjUlIHtcclxuICAgIHRyYW5zZm9ybTogc2NhbGUoMSk7XHJcbiAgfVxyXG4gIDUwJSB7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDMpO1xyXG4gIH1cclxufVxyXG4ucHVsc2UtYnV0dG9uIHtcclxuICAtd2Via2l0LWFuaW1hdGlvbjogcHVsc2UgMXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XHJcbiAgLW1vei1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xyXG4gIC1tcy1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xyXG4gIGFuaW1hdGlvbjogcHVsc2UgMXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XHJcbn1cclxuLnB1bHNlLWJ1dHRvbjpob3ZlciB7XHJcbiAgLXdlYmtpdC1hbmltYXRpb246IG5vbmU7XHJcbiAgLW1vei1hbmltYXRpb246IG5vbmU7XHJcbiAgLW1zLWFuaW1hdGlvbjogbm9uZTtcclxuICBhbmltYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDEyODBweCkge1xyXG4gIG1hdC1mb3JtLWZpZWxkLFxyXG4gIGJ1dHRvbiB7XHJcbiAgICB3aWR0aDogOTAlO1xyXG4gICAganVzdGlmeS1pdGVtczogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiAxNTAlO1xyXG4gIH1cclxuICAubWF0LWRpc3BsYXktMSxcclxuICAubWF0LWRpc3BsYXktMiB7XHJcbiAgICBmb250LXNpemU6IDE1MCUgIWltcG9ydGFudDtcclxuICAgIG1hcmdpbi1ib3R0b206IDEycHg7XHJcbiAgfVxyXG4gIC5tYXQtZGlzcGxheS0zIHtcclxuICAgIGZvbnQtc2l6ZTogOHZ3ICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMnB4O1xyXG4gICAgbWluLXdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgbGluZS1oZWlnaHQ6IDh2dztcclxuICB9XHJcbiAgXHJcbiAgZm9ybSB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfVxyXG4gIFxyXG59XHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDQyMHB4KSB7XHJcbiAgLnRleHQtbGlzdCB7XHJcbiAgICBsaW5lLWhlaWdodDogN3Z3ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG5cclxufSIsIi5maXJzdC1wYWdlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQwOGViZjtcbn1cblxuaWZyYW1lIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgbWluLWhlaWdodDogNDAwcHg7XG59XG5cbi5tYXQtZGlzcGxheS0xLFxuLm1hdC1kaXNwbGF5LTIsXG4ubWF0LWRpc3BsYXktMyB7XG4gIG1hcmdpbi1ib3R0b206IDEycHg7XG59XG5cbi53YXJuIHtcbiAgY29sb3I6ICNlZTUwNmY7XG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGxpbmUtaGVpZ2h0OiAyNXB4O1xufVxuXG5tYXQtZm9ybS1maWVsZCxcbmJ1dHRvbiB7XG4gIHdpZHRoOiA2MCU7XG4gIGhlaWdodDogMTB2aDtcbiAgY29sb3I6IGJsYWNrO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbmJ1dHRvbiB7XG4gIGZvbnQtc2l6ZTogMTEwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlNTA2ZjtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uY291bnRkb3duIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG5mb3JtIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1sZWZ0OiA1NXB4O1xufVxuXG5jb3VudGRvd24ge1xuICBsZXR0ZXItc3BhY2luZzogMnB4O1xufVxuXG5tYXQtaWNvbiB7XG4gIHBhZGRpbmctcmlnaHQ6IDMycHg7XG59XG5cbkBrZXlmcmFtZXMgcHVsc2Uge1xuICAyNSUge1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMSk7XG4gIH1cbiAgNTAlIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDMpO1xuICB9XG59XG4ucHVsc2UtYnV0dG9uIHtcbiAgLXdlYmtpdC1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xuICAtbW96LWFuaW1hdGlvbjogcHVsc2UgMXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XG4gIC1tcy1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xuICBhbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xufVxuXG4ucHVsc2UtYnV0dG9uOmhvdmVyIHtcbiAgLXdlYmtpdC1hbmltYXRpb246IG5vbmU7XG4gIC1tb3otYW5pbWF0aW9uOiBub25lO1xuICAtbXMtYW5pbWF0aW9uOiBub25lO1xuICBhbmltYXRpb246IG5vbmU7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDEyODBweCkge1xuICBtYXQtZm9ybS1maWVsZCxcbmJ1dHRvbiB7XG4gICAgd2lkdGg6IDkwJTtcbiAgICBqdXN0aWZ5LWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxNTAlO1xuICB9XG5cbiAgLm1hdC1kaXNwbGF5LTEsXG4ubWF0LWRpc3BsYXktMiB7XG4gICAgZm9udC1zaXplOiAxNTAlICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luLWJvdHRvbTogMTJweDtcbiAgfVxuXG4gIC5tYXQtZGlzcGxheS0zIHtcbiAgICBmb250LXNpemU6IDh2dyAhaW1wb3J0YW50O1xuICAgIG1hcmdpbi1ib3R0b206IDEycHg7XG4gICAgbWluLXdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBsaW5lLWhlaWdodDogOHZ3O1xuICB9XG5cbiAgZm9ybSB7XG4gICAgbWFyZ2luOiAwO1xuICB9XG59XG5AbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiA0MjBweCkge1xuICAudGV4dC1saXN0IHtcbiAgICBsaW5lLWhlaWdodDogN3Z3ICFpbXBvcnRhbnQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/pages/first-page/first-page.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/pages/first-page/first-page.component.ts ***!
+  \**********************************************************/
+/*! exports provided: FirstPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FirstPageComponent", function() { return FirstPageComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
+
+
+var FirstPageComponent = /** @class */ (function () {
+    function FirstPageComponent(sanitizer) {
+        this.sanitizer = sanitizer;
+        this.videoURL = 'https://www.youtube.com/embed/PzkiNG-DS18';
+        this.users = [
+            {
+                name: 'Petar',
+                city: 'Beograd',
+                gender: 'M',
+                image: '../../../assets/images/hanibal.jpg'
+            }
+        ];
+        this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoURL);
+    }
+    FirstPageComponent.prototype.ngOnInit = function () { };
+    FirstPageComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
+    ]; };
+    FirstPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-first-page',
+            template: __webpack_require__(/*! raw-loader!./first-page.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/first-page/first-page.component.html"),
+            styles: [__webpack_require__(/*! ./first-page.component.scss */ "./src/app/pages/first-page/first-page.component.scss")]
+        })
+    ], FirstPageComponent);
+    return FirstPageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/header/header.component.scss":
 /*!****************************************************!*\
   !*** ./src/app/pages/header/header.component.scss ***!
@@ -365,7 +415,7 @@ var AppDescriptionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n  padding: 0 48px;\n  background-color: #0d0d0d;\n}\n\nimg {\n  width: 100%;\n  height: 100%;\n}\n\n.header-logo-container {\n  padding: 12px 0;\n}\n\n.header-logo {\n  margin-left: -60px;\n}\n\nbutton {\n  background-color: #ee506f;\n  color: white;\n  font-size: 150%;\n}\n\n@media only screen and (max-width: 1000px) {\n  .header {\n    padding: 0 6px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaGVhZGVyL0M6XFxVc2Vyc1xcTmVtYW5qYVxcRG9jdW1lbnRzXFxHaXQgUHJvamVjdHNcXGFuZ3VsYXItcHJvamVjdHNcXHRyYWluLW1lLW9ubGluZS9zcmNcXGFwcFxccGFnZXNcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBQTtFQUNBLHlCQUFBO0FDQ0Y7O0FERUE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtBQ0NGOztBREVBO0VBQ0UsZUFBQTtBQ0NGOztBREVBO0VBQ0Usa0JBQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFO0lBQ0UsY0FBQTtFQ0NGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciB7XHJcbiAgcGFkZGluZzogMCA0OHB4O1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMwZDBkMGQ7XHJcbn1cclxuXHJcbmltZyB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcclxuICBwYWRkaW5nOiAxMnB4IDA7XHJcbn1cclxuXHJcbi5oZWFkZXItbG9nbyB7XHJcbiAgbWFyZ2luLWxlZnQ6IC02MHB4O1xyXG59XHJcblxyXG5idXR0b24ge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMTUwJTtcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcclxuICAuaGVhZGVyIHtcclxuICAgIHBhZGRpbmc6IDAgNnB4O1xyXG4gIH1cclxuICAuaGVhZGVyLWxvZ28ge1xyXG4gIH1cclxufVxyXG4iLCIuaGVhZGVyIHtcbiAgcGFkZGluZzogMCA0OHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMGQwZDBkO1xufVxuXG5pbWcge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgcGFkZGluZzogMTJweCAwO1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICBtYXJnaW4tbGVmdDogLTYwcHg7XG59XG5cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAxNTAlO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuaGVhZGVyIHtcbiAgICBwYWRkaW5nOiAwIDZweDtcbiAgfVxufSJdfQ== */"
+module.exports = ".header {\n  width: 100%;\n  padding: 0 48px;\n  background-color: #0d0d0d;\n}\n\n.header-logo-container {\n  height: 100%;\n}\n\n.header-logo {\n  width: 100%;\n  height: 100%;\n  margin-left: -48px;\n}\n\nbutton {\n  background-color: #ee506f;\n  color: white;\n  font-size: 100%;\n  width: 100%;\n  height: 70%;\n}\n\n@media all and (max-width: 420px) {\n  .header {\n    padding: 0 6px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaGVhZGVyL0M6XFxVc2Vyc1xcTmVtYW5qYVxcRG9jdW1lbnRzXFxHaXQgUHJvamVjdHNcXGFuZ3VsYXItcHJvamVjdHNcXHRyYWluLW1lLW9ubGluZS9zcmNcXGFwcFxccGFnZXNcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtFQUNBLGVBQUE7RUFDQSx5QkFBQTtBQ0NGOztBREVBO0VBQ0MsWUFBQTtBQ0NEOztBREVBO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDRCxrQkFBQTtBQ0NEOztBREdBO0VBQ0UseUJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0FDQUY7O0FER0E7RUFDRTtJQUNFLGNBQUE7RUNBRjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXIge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmc6IDAgNDhweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMGQwZDBkO1xyXG59XHJcblxyXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcclxuIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLmhlYWRlci1sb2dvIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiBtYXJnaW4tbGVmdDogLTQ4cHg7XHJcblxyXG59XHJcblxyXG5idXR0b24ge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMTAwJTtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDcwJTtcclxufVxyXG5cclxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogNDIwcHgpIHtcclxuICAuaGVhZGVyIHtcclxuICAgIHBhZGRpbmc6IDAgNnB4O1xyXG4gIH1cclxufSIsIi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMCA0OHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMGQwZDBkO1xufVxuXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBtYXJnaW4tbGVmdDogLTQ4cHg7XG59XG5cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA3MCU7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDQyMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDAgNnB4O1xuICB9XG59Il19 */"
 
 /***/ }),
 
@@ -396,65 +446,6 @@ var HeaderComponent = /** @class */ (function () {
         })
     ], HeaderComponent);
     return HeaderComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/main-page/main-page.component.scss":
-/*!**********************************************************!*\
-  !*** ./src/app/pages/main-page/main-page.component.scss ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".main-container {\n  width: 100%;\n}\n\n.first-page {\n  background-color: #408ebf;\n}\n\niframe {\n  width: 100%;\n  height: 100%;\n  min-height: 400px;\n}\n\n.mat-display-1,\n.mat-display-2,\n.mat-display-3 {\n  margin-bottom: 12px;\n}\n\nbutton {\n  font-size: 190%;\n  background-color: #ee506f;\n  height: 80px;\n}\n\n.warn {\n  color: #ee506f;\n  font-weight: bolder;\n  text-align: center;\n}\n\nmat-form-field,\nbutton {\n  width: 60%;\n  color: white;\n}\n\n.countdown {\n  color: white;\n}\n\nform {\n  width: 100%;\n  margin-left: 55px;\n}\n\ncountdown {\n  letter-spacing: 2px;\n}\n\nmat-icon {\n  padding-right: 32px;\n}\n\n@-webkit-keyframes pulse {\n  25% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.03);\n  }\n}\n\n@keyframes pulse {\n  25% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.03);\n  }\n}\n\n.pulse-button {\n  -webkit-animation: pulse 1s ease-in-out infinite;\n  animation: pulse 1s ease-in-out infinite;\n}\n\n.pulse-button:hover {\n  -webkit-animation: none;\n  animation: none;\n}\n\n@media only screen and (max-width: 1275px) {\n  mat-form-field,\nbutton {\n    width: 90%;\n    justify-items: center;\n    font-size: 150%;\n  }\n\n  .text {\n    min-width: 100%;\n    text-align: center;\n    line-height: 1.5;\n  }\n\n  .mat-display-1,\n.mat-display-2,\n.mat-display-3 {\n    font-size: 150% !important;\n    margin-bottom: 12px;\n  }\n\n  .mat-display-3 {\n    font-size: 200% !important;\n  }\n\n  .warn {\n    width: 100%;\n  }\n\n  .first-page {\n    padding: 0 6px;\n  }\n\n  form {\n    margin: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbWFpbi1wYWdlL0M6XFxVc2Vyc1xcTmVtYW5qYVxcRG9jdW1lbnRzXFxHaXQgUHJvamVjdHNcXGFuZ3VsYXItcHJvamVjdHNcXHRyYWluLW1lLW9ubGluZS9zcmNcXGFwcFxccGFnZXNcXG1haW4tcGFnZVxcbWFpbi1wYWdlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9tYWluLXBhZ2UvbWFpbi1wYWdlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtBQ0NGOztBRENBO0VBQ0UseUJBQUE7QUNFRjs7QURDQTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QUNFRjs7QURDQTs7O0VBR0UsbUJBQUE7QUNFRjs7QURDQTtFQUNFLGVBQUE7RUFDQSx5QkFBQTtFQUNBLFlBQUE7QUNFRjs7QURDQTtFQUNFLGNBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0FDRUY7O0FEQUE7O0VBRUUsVUFBQTtFQUNBLFlBQUE7QUNHRjs7QUREQTtFQUNFLFlBQUE7QUNJRjs7QURGQTtFQUNFLFdBQUE7RUFDQSxpQkFBQTtBQ0tGOztBREhBO0VBQ0UsbUJBQUE7QUNNRjs7QURKQTtFQUNFLG1CQUFBO0FDT0Y7O0FESkE7RUFDRTtJQUNFLG1CQUFBO0VDT0Y7RURMQTtJQUNFLHNCQUFBO0VDT0Y7QUFDRjs7QURiQTtFQUNFO0lBQ0UsbUJBQUE7RUNPRjtFRExBO0lBQ0Usc0JBQUE7RUNPRjtBQUNGOztBRExBO0VBQ0UsZ0RBQUE7RUFHQSx3Q0FBQTtBQ09GOztBRExBO0VBQ0UsdUJBQUE7RUFHQSxlQUFBO0FDUUY7O0FETEE7RUFDRTs7SUFFRSxVQUFBO0lBQ0EscUJBQUE7SUFDQSxlQUFBO0VDUUY7O0VETkE7SUFDRSxlQUFBO0lBQ0Esa0JBQUE7SUFDQSxnQkFBQTtFQ1NGOztFRFBBOzs7SUFHRSwwQkFBQTtJQUNBLG1CQUFBO0VDVUY7O0VEUkE7SUFDRSwwQkFBQTtFQ1dGOztFRFRBO0lBQ0UsV0FBQTtFQ1lGOztFRFZBO0lBQ0UsY0FBQTtFQ2FGOztFRFhBO0lBQ0UsU0FBQTtFQ2NGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9tYWluLXBhZ2UvbWFpbi1wYWdlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW4tY29udGFpbmVyIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4uZmlyc3QtcGFnZSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQwOGViZjtcclxufVxyXG5cclxuaWZyYW1lIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogNDAwcHg7XHJcbn1cclxuXHJcbi5tYXQtZGlzcGxheS0xLFxyXG4ubWF0LWRpc3BsYXktMixcclxuLm1hdC1kaXNwbGF5LTMge1xyXG4gIG1hcmdpbi1ib3R0b206IDEycHg7XHJcbn1cclxuXHJcbmJ1dHRvbiB7XHJcbiAgZm9udC1zaXplOiAxOTAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XHJcbiAgaGVpZ2h0OiA4MHB4O1xyXG59XHJcblxyXG4ud2FybiB7XHJcbiAgY29sb3I6ICNlZTUwNmY7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxubWF0LWZvcm0tZmllbGQsXHJcbmJ1dHRvbiB7XHJcbiAgd2lkdGg6IDYwJTtcclxuICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmNvdW50ZG93biB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcbmZvcm0ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1sZWZ0OiA1NXB4O1xyXG59XHJcbmNvdW50ZG93biB7XHJcbiAgbGV0dGVyLXNwYWNpbmc6IDJweDtcclxufVxyXG5tYXQtaWNvbiB7XHJcbiAgcGFkZGluZy1yaWdodDogMzJweDtcclxufVxyXG5cclxuQGtleWZyYW1lcyBwdWxzZSB7XHJcbiAgMjUlIHtcclxuICAgIHRyYW5zZm9ybTogc2NhbGUoMSk7XHJcbiAgfVxyXG4gIDUwJSB7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDMpO1xyXG4gIH1cclxufVxyXG4ucHVsc2UtYnV0dG9uIHtcclxuICAtd2Via2l0LWFuaW1hdGlvbjogcHVsc2UgMXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XHJcbiAgLW1vei1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xyXG4gIC1tcy1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xyXG4gIGFuaW1hdGlvbjogcHVsc2UgMXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XHJcbn1cclxuLnB1bHNlLWJ1dHRvbjpob3ZlciB7XHJcbiAgLXdlYmtpdC1hbmltYXRpb246IG5vbmU7XHJcbiAgLW1vei1hbmltYXRpb246IG5vbmU7XHJcbiAgLW1zLWFuaW1hdGlvbjogbm9uZTtcclxuICBhbmltYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogMTI3NXB4KSB7XHJcbiAgbWF0LWZvcm0tZmllbGQsXHJcbiAgYnV0dG9uIHtcclxuICAgIHdpZHRoOiA5MCU7XHJcbiAgICBqdXN0aWZ5LWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDE1MCU7XHJcbiAgfVxyXG4gIC50ZXh0IHtcclxuICAgIG1pbi13aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGxpbmUtaGVpZ2h0OiAxLjU7XHJcbiAgfVxyXG4gIC5tYXQtZGlzcGxheS0xLFxyXG4gIC5tYXQtZGlzcGxheS0yLFxyXG4gIC5tYXQtZGlzcGxheS0zIHtcclxuICAgIGZvbnQtc2l6ZTogMTUwJSAhaW1wb3J0YW50O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTJweDtcclxuICB9XHJcbiAgLm1hdC1kaXNwbGF5LTMge1xyXG4gICAgZm9udC1zaXplOiAyMDAlICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC53YXJuIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxuICAuZmlyc3QtcGFnZSB7XHJcbiAgICBwYWRkaW5nOiAwIDZweDtcclxuICB9XHJcbiAgZm9ybSB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfVxyXG59XHJcbiIsIi5tYWluLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZmlyc3QtcGFnZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0MDhlYmY7XG59XG5cbmlmcmFtZSB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIG1pbi1oZWlnaHQ6IDQwMHB4O1xufVxuXG4ubWF0LWRpc3BsYXktMSxcbi5tYXQtZGlzcGxheS0yLFxuLm1hdC1kaXNwbGF5LTMge1xuICBtYXJnaW4tYm90dG9tOiAxMnB4O1xufVxuXG5idXR0b24ge1xuICBmb250LXNpemU6IDE5MCU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XG4gIGhlaWdodDogODBweDtcbn1cblxuLndhcm4ge1xuICBjb2xvcjogI2VlNTA2ZjtcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5tYXQtZm9ybS1maWVsZCxcbmJ1dHRvbiB7XG4gIHdpZHRoOiA2MCU7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmNvdW50ZG93biB7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuZm9ybSB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tbGVmdDogNTVweDtcbn1cblxuY291bnRkb3duIHtcbiAgbGV0dGVyLXNwYWNpbmc6IDJweDtcbn1cblxubWF0LWljb24ge1xuICBwYWRkaW5nLXJpZ2h0OiAzMnB4O1xufVxuXG5Aa2V5ZnJhbWVzIHB1bHNlIHtcbiAgMjUlIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEpO1xuICB9XG4gIDUwJSB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjAzKTtcbiAgfVxufVxuLnB1bHNlLWJ1dHRvbiB7XG4gIC13ZWJraXQtYW5pbWF0aW9uOiBwdWxzZSAxcyBlYXNlLWluLW91dCBpbmZpbml0ZTtcbiAgLW1vei1hbmltYXRpb246IHB1bHNlIDFzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xuICAtbXMtYW5pbWF0aW9uOiBwdWxzZSAxcyBlYXNlLWluLW91dCBpbmZpbml0ZTtcbiAgYW5pbWF0aW9uOiBwdWxzZSAxcyBlYXNlLWluLW91dCBpbmZpbml0ZTtcbn1cblxuLnB1bHNlLWJ1dHRvbjpob3ZlciB7XG4gIC13ZWJraXQtYW5pbWF0aW9uOiBub25lO1xuICAtbW96LWFuaW1hdGlvbjogbm9uZTtcbiAgLW1zLWFuaW1hdGlvbjogbm9uZTtcbiAgYW5pbWF0aW9uOiBub25lO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEyNzVweCkge1xuICBtYXQtZm9ybS1maWVsZCxcbmJ1dHRvbiB7XG4gICAgd2lkdGg6IDkwJTtcbiAgICBqdXN0aWZ5LWl0ZW1zOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxNTAlO1xuICB9XG5cbiAgLnRleHQge1xuICAgIG1pbi13aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbGluZS1oZWlnaHQ6IDEuNTtcbiAgfVxuXG4gIC5tYXQtZGlzcGxheS0xLFxuLm1hdC1kaXNwbGF5LTIsXG4ubWF0LWRpc3BsYXktMyB7XG4gICAgZm9udC1zaXplOiAxNTAlICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luLWJvdHRvbTogMTJweDtcbiAgfVxuXG4gIC5tYXQtZGlzcGxheS0zIHtcbiAgICBmb250LXNpemU6IDIwMCUgIWltcG9ydGFudDtcbiAgfVxuXG4gIC53YXJuIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5maXJzdC1wYWdlIHtcbiAgICBwYWRkaW5nOiAwIDZweDtcbiAgfVxuXG4gIGZvcm0ge1xuICAgIG1hcmdpbjogMDtcbiAgfVxufSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/pages/main-page/main-page.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/pages/main-page/main-page.component.ts ***!
-  \********************************************************/
-/*! exports provided: MainPageComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageComponent", function() { return MainPageComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-
-
-
-var MainPageComponent = /** @class */ (function () {
-    function MainPageComponent(sanitizer) {
-        this.sanitizer = sanitizer;
-        this.videoURL = 'https://www.youtube.com/embed/PzkiNG-DS18';
-        this.users = [
-            {
-                name: 'Petar',
-                city: 'Beograd',
-                gender: 'M',
-                image: '../../../assets/images/hanibal.jpg'
-            }
-        ];
-        this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoURL);
-    }
-    MainPageComponent.prototype.ngOnInit = function () { };
-    MainPageComponent.ctorParameters = function () { return [
-        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
-    ]; };
-    MainPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-main-page',
-            template: __webpack_require__(/*! raw-loader!./main-page.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/main-page/main-page.component.html"),
-            styles: [__webpack_require__(/*! ./main-page.component.scss */ "./src/app/pages/main-page/main-page.component.scss")]
-        })
-    ], MainPageComponent);
-    return MainPageComponent;
 }());
 
 
@@ -505,44 +496,44 @@ var PricesComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/pages/strongman-first-text/strongman-first-text.component.scss":
-/*!********************************************************************************!*\
-  !*** ./src/app/pages/strongman-first-text/strongman-first-text.component.scss ***!
-  \********************************************************************************/
+/***/ "./src/app/pages/second-page/second-page.component.scss":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/second-page/second-page.component.scss ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".second-page-image-wrapper {\n  background-image: url('strongman-first-picture.png');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  width: 90vw;\n  height: 100%;\n  transform: scaleX(-1);\n  z-index: -1;\n  position: absolute;\n  opacity: 0.3;\n}\n\n.mat-display-3 {\n  font-weight: bolder;\n  font-size: 5vh;\n}\n\n.mat-display-1 {\n  font-weight: normal;\n  font-size: 3vh;\n}\n\nbutton {\n  width: 60%;\n  background-color: #ee506f;\n  height: 6vh;\n  color: white;\n  font-size: 150%;\n}\n\n.second-page-text {\n  z-index: 100;\n  padding: 0 48px;\n}\n\n.second-page {\n  padding: 24px 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc3Ryb25nbWFuLWZpcnN0LXRleHQvQzpcXFVzZXJzXFxOZW1hbmphXFxEb2N1bWVudHNcXEdpdCBQcm9qZWN0c1xcYW5ndWxhci1wcm9qZWN0c1xcdHJhaW4tbWUtb25saW5lL3NyY1xcYXBwXFxwYWdlc1xcc3Ryb25nbWFuLWZpcnN0LXRleHRcXHN0cm9uZ21hbi1maXJzdC10ZXh0LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9zdHJvbmdtYW4tZmlyc3QtdGV4dC9zdHJvbmdtYW4tZmlyc3QtdGV4dC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9EQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFFQSxxQkFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7QUNDRjs7QURDQTtFQUNFLG1CQUFBO0VBQ0EsY0FBQTtBQ0VGOztBREFBO0VBQ0UsbUJBQUE7RUFDQSxjQUFBO0FDR0Y7O0FEREE7RUFDRSxVQUFBO0VBQ0EseUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUNJRjs7QURGQTtFQUNFLFlBQUE7RUFDQSxlQUFBO0FDS0Y7O0FESEE7RUFDRSxlQUFBO0FDTUYiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9zdHJvbmdtYW4tZmlyc3QtdGV4dC9zdHJvbmdtYW4tZmlyc3QtdGV4dC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWNvbmQtcGFnZS1pbWFnZS13cmFwcGVyIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvc3Ryb25nbWFuLWZpcnN0LXBpY3R1cmUucG5nJyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB3aWR0aDogOTB2dztcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlWCgtMSk7XHJcbiAgdHJhbnNmb3JtOiBzY2FsZVgoLTEpO1xyXG4gIHotaW5kZXg6IC0xO1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICBvcGFjaXR5OiAwLjM7XHJcbn1cclxuLm1hdC1kaXNwbGF5LTMge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XHJcbiAgZm9udC1zaXplOiA1dmg7XHJcbn1cclxuLm1hdC1kaXNwbGF5LTEge1xyXG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgZm9udC1zaXplOiAzdmg7XHJcbn1cclxuYnV0dG9uIHtcclxuICB3aWR0aDogNjAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlZTUwNmY7XHJcbiAgaGVpZ2h0OiA2dmg7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMTUwJTtcclxufVxyXG4uc2Vjb25kLXBhZ2UtdGV4dCB7XHJcbiAgei1pbmRleDogMTAwO1xyXG4gIHBhZGRpbmc6IDAgNDhweDtcclxufVxyXG4uc2Vjb25kLXBhZ2Uge1xyXG4gIHBhZGRpbmc6IDI0cHggMDtcclxufVxyXG4iLCIuc2Vjb25kLXBhZ2UtaW1hZ2Utd3JhcHBlciB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvc3Ryb25nbWFuLWZpcnN0LXBpY3R1cmUucG5nXCIpO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHdpZHRoOiA5MHZ3O1xuICBoZWlnaHQ6IDEwMCU7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiBzY2FsZVgoLTEpO1xuICB0cmFuc2Zvcm06IHNjYWxlWCgtMSk7XG4gIHotaW5kZXg6IC0xO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIG9wYWNpdHk6IDAuMztcbn1cblxuLm1hdC1kaXNwbGF5LTMge1xuICBmb250LXdlaWdodDogYm9sZGVyO1xuICBmb250LXNpemU6IDV2aDtcbn1cblxuLm1hdC1kaXNwbGF5LTEge1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBmb250LXNpemU6IDN2aDtcbn1cblxuYnV0dG9uIHtcbiAgd2lkdGg6IDYwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlNTA2ZjtcbiAgaGVpZ2h0OiA2dmg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAxNTAlO1xufVxuXG4uc2Vjb25kLXBhZ2UtdGV4dCB7XG4gIHotaW5kZXg6IDEwMDtcbiAgcGFkZGluZzogMCA0OHB4O1xufVxuXG4uc2Vjb25kLXBhZ2Uge1xuICBwYWRkaW5nOiAyNHB4IDA7XG59Il19 */"
+module.exports = ".second-page-image-wrapper {\n  background-image: url('strongman-first-picture.png');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  width: 90vw;\n  height: 100%;\n  transform: scaleX(-1);\n  z-index: -1;\n  position: absolute;\n  opacity: 0.3;\n}\n\n.mat-display-3 {\n  font-weight: bolder;\n  font-size: 5vh;\n}\n\n.mat-display-1 {\n  font-weight: normal;\n  font-size: 3vh;\n}\n\nbutton {\n  width: 60%;\n  background-color: #ee506f;\n  height: 10vh;\n  color: white;\n  font-size: 110%;\n}\n\n.second-page-text {\n  z-index: 100;\n}\n\n@media all and (max-width: 1280px) {\n  .mat-display-3 {\n    text-align: center;\n  }\n\n  .mat-display-1 {\n    line-height: 5vw;\n  }\n}\n\n@media all and (max-width: 420px) {\n  .mat-display-1 {\n    line-height: 7vw;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2Vjb25kLXBhZ2UvQzpcXFVzZXJzXFxOZW1hbmphXFxEb2N1bWVudHNcXEdpdCBQcm9qZWN0c1xcYW5ndWxhci1wcm9qZWN0c1xcdHJhaW4tbWUtb25saW5lL3NyY1xcYXBwXFxwYWdlc1xcc2Vjb25kLXBhZ2VcXHNlY29uZC1wYWdlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9zZWNvbmQtcGFnZS9zZWNvbmQtcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9EQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFFQSxxQkFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7QUNDSjs7QURDRTtFQUNFLG1CQUFBO0VBQ0EsY0FBQTtBQ0VKOztBREFFO0VBQ0UsbUJBQUE7RUFDQSxjQUFBO0FDR0o7O0FEREU7RUFDRSxVQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUNJSjs7QURGRTtFQUNFLFlBQUE7QUNLSjs7QURIRTtFQUNFO0lBQ0Usa0JBQUE7RUNNSjs7RURKRTtJQUNBLGdCQUFBO0VDT0Y7QUFDRjs7QURKRTtFQUNFO0lBQ0UsZ0JBQUE7RUNNSjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvc2Vjb25kLXBhZ2Uvc2Vjb25kLXBhZ2UuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2Vjb25kLXBhZ2UtaW1hZ2Utd3JhcHBlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvc3Ryb25nbWFuLWZpcnN0LXBpY3R1cmUucG5nJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIHdpZHRoOiA5MHZ3O1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlWCgtMSk7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlWCgtMSk7XHJcbiAgICB6LWluZGV4OiAtMTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG9wYWNpdHk6IDAuMztcclxuICB9XHJcbiAgLm1hdC1kaXNwbGF5LTMge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcclxuICAgIGZvbnQtc2l6ZTogNXZoO1xyXG4gIH1cclxuICAubWF0LWRpc3BsYXktMSB7XHJcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgZm9udC1zaXplOiAzdmg7XHJcbiAgfVxyXG4gIGJ1dHRvbiB7XHJcbiAgICB3aWR0aDogNjAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VlNTA2ZjtcclxuICAgIGhlaWdodDogMTB2aDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtc2l6ZTogMTEwJTtcclxuICB9XHJcbiAgLnNlY29uZC1wYWdlLXRleHQge1xyXG4gICAgei1pbmRleDogMTAwO1xyXG4gIH1cclxuICBAbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiAxMjgwcHgpIHtcclxuICAgIC5tYXQtZGlzcGxheS0zIHtcclxuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgfVxyXG4gICAgLm1hdC1kaXNwbGF5LTEge1xyXG4gICAgbGluZS1oZWlnaHQ6IDV2dzsgICAgICBcclxuICAgIH1cclxuICB9XHJcblxyXG4gIEBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDQyMHB4KSB7XHJcbiAgICAubWF0LWRpc3BsYXktMSB7XHJcbiAgICAgIGxpbmUtaGVpZ2h0OiA3dnc7ICAgICAgXHJcbiAgICAgIH1cclxuXHJcbiAgfSIsIi5zZWNvbmQtcGFnZS1pbWFnZS13cmFwcGVyIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2ltYWdlcy9zdHJvbmdtYW4tZmlyc3QtcGljdHVyZS5wbmdcIik7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgd2lkdGg6IDkwdnc7XG4gIGhlaWdodDogMTAwJTtcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlWCgtMSk7XG4gIHRyYW5zZm9ybTogc2NhbGVYKC0xKTtcbiAgei1pbmRleDogLTE7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgb3BhY2l0eTogMC4zO1xufVxuXG4ubWF0LWRpc3BsYXktMyB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG4gIGZvbnQtc2l6ZTogNXZoO1xufVxuXG4ubWF0LWRpc3BsYXktMSB7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIGZvbnQtc2l6ZTogM3ZoO1xufVxuXG5idXR0b24ge1xuICB3aWR0aDogNjAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWU1MDZmO1xuICBoZWlnaHQ6IDEwdmg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAxMTAlO1xufVxuXG4uc2Vjb25kLXBhZ2UtdGV4dCB7XG4gIHotaW5kZXg6IDEwMDtcbn1cblxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTI4MHB4KSB7XG4gIC5tYXQtZGlzcGxheS0zIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cblxuICAubWF0LWRpc3BsYXktMSB7XG4gICAgbGluZS1oZWlnaHQ6IDV2dztcbiAgfVxufVxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogNDIwcHgpIHtcbiAgLm1hdC1kaXNwbGF5LTEge1xuICAgIGxpbmUtaGVpZ2h0OiA3dnc7XG4gIH1cbn0iXX0= */"
 
 /***/ }),
 
-/***/ "./src/app/pages/strongman-first-text/strongman-first-text.component.ts":
-/*!******************************************************************************!*\
-  !*** ./src/app/pages/strongman-first-text/strongman-first-text.component.ts ***!
-  \******************************************************************************/
-/*! exports provided: StrongmanFirstTextComponent */
+/***/ "./src/app/pages/second-page/second-page.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/pages/second-page/second-page.component.ts ***!
+  \************************************************************/
+/*! exports provided: SecondPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StrongmanFirstTextComponent", function() { return StrongmanFirstTextComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SecondPageComponent", function() { return SecondPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var StrongmanFirstTextComponent = /** @class */ (function () {
-    function StrongmanFirstTextComponent() {
+var SecondPageComponent = /** @class */ (function () {
+    function SecondPageComponent() {
     }
-    StrongmanFirstTextComponent.prototype.ngOnInit = function () {
+    SecondPageComponent.prototype.ngOnInit = function () {
     };
-    StrongmanFirstTextComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    SecondPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-strongman-first-text',
-            template: __webpack_require__(/*! raw-loader!./strongman-first-text.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/strongman-first-text/strongman-first-text.component.html"),
-            styles: [__webpack_require__(/*! ./strongman-first-text.component.scss */ "./src/app/pages/strongman-first-text/strongman-first-text.component.scss")]
+            selector: 'app-second-page',
+            template: __webpack_require__(/*! raw-loader!./second-page.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/second-page/second-page.component.html"),
+            styles: [__webpack_require__(/*! ./second-page.component.scss */ "./src/app/pages/second-page/second-page.component.scss")]
         })
-    ], StrongmanFirstTextComponent);
-    return StrongmanFirstTextComponent;
+    ], SecondPageComponent);
+    return SecondPageComponent;
 }());
 
 

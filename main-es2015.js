@@ -129,7 +129,7 @@ module.exports = "<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"space-b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n <img [src]=\"users[i].image\" alt=\"Slika\" class=\"image\"/>\n  <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <span >{{users[i].name}}, {{users[i].city}}</span>\n    <span>Upravo kreirao/la nalog</span>\n  </div>\n</div>\n"
+module.exports = "\n<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n  \n    <picture> <img [src]=\"users[i].image\" alt=\"Slika\" class=\"image\"/></picture>\n  <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <span >{{users[i].name}}, {{users[i].city}}</span>\n    <span>Upravo kreirao/la nalog</span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -595,7 +595,7 @@ let FirstPageComponent = class FirstPageComponent {
         });
     }
     ngOnInit() {
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["interval"])(5000).subscribe(x => this.openSnackBar());
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["interval"])(20000).subscribe(x => this.openSnackBar());
         // this.openSnackBar();
     }
 };
@@ -809,15 +809,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let NewUserSnackbarComponent = class NewUserSnackbarComponent {
-    //images = new Array();
-    // @ViewChild('image', {static: false}) imgTarget: ElementRef;
-    // pload(...args: any[]): void {
-    //   for (let i = 0; i < args.length; i++) {
-    //     this.images[i] = new Image();
-    //     this.images[i].src = args[i];
-    //     this.users[i].image = this.images[i];
-    //   }
-    // }
     constructor() {
         this.users = [
             {
@@ -833,9 +824,7 @@ let NewUserSnackbarComponent = class NewUserSnackbarComponent {
         ];
     }
     ngOnInit() {
-        // this.pload('../../../assets/images/strongmen.jpg', '../../../assets/images/strongmen.jpg');
         this.i = Math.floor(Math.random() * 100 + 1) % this.users.length;
-        // this.imgTarget.nativeElement.appendChild(this.users[this.i].image);
     }
 };
 NewUserSnackbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

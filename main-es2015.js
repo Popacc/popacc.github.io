@@ -52,7 +52,7 @@ module.exports = "<div fxLayout=\"column\" fxLayoutGap=\"48px\">\n  <div\n    fx
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"fifth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n<div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n  <div\n    class=\"talk-bubble tri-right border round btm-left-in\"\n    fxLayoutAlign=\"center center\"\n  >\n    <div class=\"talktext title\">\n      <p>Sa onlajnom je ponovo postalo teško</p>\n    </div>\n  </div>\n  <img\n    src=\"../../../assets/images/strongman-thinking.png\"\n    alt=\"Strongman\"\n    class=\"strongman-image\"\n  />\n</div>\n  <div class=\"text-below-title\">\n    Nakon postova before-after mojih klijenata, kao i serije edukativnih postova\n    na fejsu (jeste nisam koristio instagram tada) počeli su da mi se javljaju\n    ljudi van Srbije. Naši ljudi u tuđini žele da dovedu svoju formu u red ali\n    ne znaju kako a u lokalu im je ili skupo ili loše. Moj prvi klijent naš\n    gastarbajter u Bugarskoj smršao 7 kila za mesec dana. Po isteku\n    jednomesečnog programa me častio. Radeći 2-3 sata oko njega zaradio sam\n    skoro isto kao i sa klijentom sa 12 odlazaka u teretanu. Iznenada se cena\n    mog radnog sata utrostručila. Tako sam ja postao onlajn personalni trener.\n  </div>\n</div>\n"
+module.exports = "<div\n  class=\"fifth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n<div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n  <div\n    class=\"talk-bubble tri-right border round btm-left-in\"\n    fxLayoutAlign=\"center center\"\n  >\n    <div class=\"talktext title\">\n      <p>Sa onlajnom je ponovo postalo teško</p>\n    </div>\n  </div>\n  <img\n    src=\"../../../assets/images/strongman-thinking.png\"\n    alt=\"Strongman\"\n    class=\"strongman-image\"\n  />\n</div>\n  <div class=\"text-below-title\">\n    {{text}}\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -96,7 +96,7 @@ module.exports = "<div class=\"form-page\" fxLayout=\"column\" fxLayoutGap=\"24p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"fourth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n<div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n  <div\n    class=\"talk-bubble tri-right border round btm-right-in\"\n    fxLayoutAlign=\"center center\"\n  >\n    <div class=\"talktext title\">\n      <p>Kako sam postao onlajn trener</p>\n    </div>\n  </div>\n  <img\n    src=\"../../../assets/images/strongman-point.png\"\n    alt=\"Strongman\"\n    class=\"strongman-image\"\n  />\n</div>\n  <div class=\"text-below-title\">\n    Nakon postova before-after mojih klijenata, kao i serije edukativnih postova\n    na fejsu (jeste nisam koristio instagram tada) počeli su da mi se javljaju\n    ljudi van Srbije. Naši ljudi u tuđini žele da dovedu svoju formu u red ali\n    ne znaju kako a u lokalu im je ili skupo ili loše. Moj prvi klijent naš\n    gastarbajter u Bugarskoj smršao 7 kila za mesec dana. Po isteku\n    jednomesečnog programa me častio. Radeći 2-3 sata oko njega zaradio sam\n    skoro isto kao i sa klijentom sa 12 odlazaka u teretanu. Iznenada se cena\n    mog radnog sata utrostručila. Tako sam ja postao onlajn personalni trener.\n  </div>\n</div>\n"
+module.exports = "<div\n  class=\"fourth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n<div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n  <div\n    class=\"talk-bubble tri-right border round btm-right-in\"\n    fxLayoutAlign=\"center center\"\n  >\n    <div class=\"talktext title\">\n      <p>Kako sam postao onlajn trener</p>\n    </div>\n  </div>\n  <img\n    src=\"../../../assets/images/strongman-point.png\"\n    alt=\"Strongman\"\n    class=\"strongman-image\"\n  />\n</div>\n  <div class=\"text-below-title\">\n    {{text}}\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "\n<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n  \n    <pictu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"before-form-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n  <div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n    <div\n      class=\"talk-bubble tri-right border round btm-left-in\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div class=\"talktext title\">\n        <p>Našao sam najbolje rešenje</p>\n      </div>\n    </div>\n    <img\n      src=\"../../../assets/images/strongman-point.png\"\n      alt=\"Strongman\"\n      class=\"strongman-image\"\n    />\n  </div>\n  <div class=\"text-below-title\">\n    Nakon postova before-after mojih klijenata, kao i serije edukativnih postova\n    na fejsu (jeste nisam koristio instagram tada) počeli su da mi se javljaju\n    ljudi van Srbije. Naši ljudi u tuđini žele da dovedu svoju formu u red ali\n    ne znaju kako a u lokalu im je ili skupo ili loše. Moj prvi klijent naš\n    gastarbajter u Bugarskoj smršao 7 kila za mesec dana. Po isteku\n    jednomesečnog programa me častio. Radeći 2-3 sata oko njega zaradio sam\n    skoro isto kao i sa klijentom sa 12 odlazaka u teretanu. Iznenada se cena\n    mog radnog sata utrostručila. Tako sam ja postao onlajn personalni trener.\n  </div>\n  <img\n    src=\"../../../assets/images/app-sample.png\"\n    alt=\"App\"\n    class=\"app-image\"\n  />\n</div>\n"
+module.exports = "<div\n  class=\"before-form-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n  <div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n    <div\n      class=\"talk-bubble tri-right border round btm-left-in\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div class=\"talktext title\">\n        <p>Našao sam najbolje rešenje</p>\n      </div>\n    </div>\n    <img\n      src=\"../../../assets/images/strongman-point.png\"\n      alt=\"Strongman\"\n      class=\"strongman-image\"\n    />\n  </div>\n  <div class=\"text-below-title\">\n    {{text}}\n  </div>\n  <img\n    src=\"../../../assets/images/app-sample.png\"\n    alt=\"App\"\n    class=\"app-image\"\n  />\n</div>\n"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div\n  class=\"checkmark-text-wrapper\"\n  fxLayoutAlign=\"sp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"sixth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n<div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n  <div\n    class=\"talk-bubble tri-right border round btm-right-in\"\n    fxLayoutAlign=\"center center\"\n  >\n    <div class=\"talktext title\">\n      <p>Može li jednostavnije i brže</p>\n    </div>\n  </div>\n  <img\n    src=\"../../../assets/images/strongman-thinking.png\"\n    alt=\"Strongman\"\n    class=\"strongman-image\"\n  />\n</div>\n  <div class=\"text-below-title\">\n    Nakon postova before-after mojih klijenata, kao i serije edukativnih postova\n    na fejsu (jeste nisam koristio instagram tada) počeli su da mi se javljaju\n    ljudi van Srbije. Naši ljudi u tuđini žele da dovedu svoju formu u red ali\n    ne znaju kako a u lokalu im je ili skupo ili loše. Moj prvi klijent naš\n    gastarbajter u Bugarskoj smršao 7 kila za mesec dana. Po isteku\n    jednomesečnog programa me častio. Radeći 2-3 sata oko njega zaradio sam\n    skoro isto kao i sa klijentom sa 12 odlazaka u teretanu. Iznenada se cena\n    mog radnog sata utrostručila. Tako sam ja postao onlajn personalni trener.\n  </div>\n</div>\n"
+module.exports = "<div\n  class=\"sixth-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n  <div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n    <div\n      class=\"talk-bubble tri-right border round btm-right-in\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div class=\"talktext title\">\n        <p>Može li jednostavnije i brže?</p>\n      </div>\n    </div>\n    <img\n      src=\"../../../assets/images/strongman-thinking.png\"\n      alt=\"Strongman\"\n      class=\"strongman-image\"\n    />\n  </div>\n  <div class=\"text-below-title\" [innerHTML]=\"text\"></div>\n</div>\n"
 
 /***/ }),
 
@@ -195,7 +195,7 @@ module.exports = "<div fxLayout=\"column\" fxLayoutGap=\"48px\">\n  <div class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- third pageeeeee     -->\n\n<div\n  class=\"third-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n  <div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n    <div\n      class=\"talk-bubble tri-right border round btm-left-in\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div class=\"talktext title\">\n        <p>Pakao kroz koji svi prolazimo u početku</p>\n      </div>\n    </div>\n    <img\n      src=\"../../../assets/images/strongman-surprised\"\n      alt=\"Strongman\"\n      class=\"strongman-image\"\n    />\n  </div>\n  <div class=\"text-below-title\">\n    Nakon postova before-after mojih klijenata, kao i serije edukativnih postova\n    na fejsu (jeste nisam koristio instagram tada) počeli su da mi se javljaju\n    ljudi van Srbije. Naši ljudi u tuđini žele da dovedu svoju formu u red ali\n    ne znaju kako a u lokalu im je ili skupo ili loše. Moj prvi klijent naš\n    gastarbajter u Bugarskoj smršao 7 kila za mesec dana. Po isteku\n    jednomesečnog programa me častio. Radeći 2-3 sata oko njega zaradio sam\n    skoro isto kao i sa klijentom sa 12 odlazaka u teretanu. Iznenada se cena\n    mog radnog sata utrostručila. Tako sam ja postao onlajn personalni trener.\n  </div>\n</div>\n\n<!-- <div class=\"page\">\n    <div class=\"second-page-image-wrapper\"></div>\n    <div fxLayoutAlign=\"flex-end\" class=\"second-page-text\">\n      <div fxFlex=\"55%\" fxLayout=\"column\" fxFlex.lt-lg=\"100%\">\n        <div class=\"mat-display-3\">Namučio sam se u početku</div>\n        <div class=\"mat-display-1\">\n          <p>\n            Da vas zainteresujem... Ja sam onaj bajča što ima par hiljada onlajn\n            klijenata, a do pre par godina sam bio drvo, ali baš apsolutno drvo za\n            onlajn biznis. U početku sam lomio glavu kako da nađem klijente, a\n            posle mnogo objavljenih before after fotografija mojih klijenata i\n            edukativnih postova kad je krenulo nisam mogao da pohvatam kome pišem\n            na viber, kome šaljem pdf na email a kome u mesindžeru video sa\n            tehnikom izvođenja.\n          </p>\n          <p>\n            Da budem iskren nisam imao jasan plan. Znao sam samo da moram da radim\n            i da se trudim. Jedna stvar je povukla drugu, pa je došla treća... I\n            sad sam Kardašijan onlajn biznisa za trenere. Ne mislim na veličinu\n            zadnjice. Iako imam najveći stomak (nikad pločice) imam impozantan\n            broj klijenata. Kako?\n          </p>\n        </div>\n        <div fxLayout=\"row\" fxLayoutAlign=\"center\" fxLayoutAlign=\"center center\" fxFlex=\"100%\">\n          <button mat-flat-button>Nastavi sa čitanjem</button>\n        </div>\n      </div>\n    </div>\n  </div> -->\n<!-- <div class=\"second-page page\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayoutGap=\"12px\">\n      <div fxLayout=\"row\" fxLayoutAlign=\"center center\" class=\"image-title-container\">\n        <img src=\"../../../assets/images/strongman-surprised\" fxFlex=\"50%\" />\n        <div class=\"text-title\" fxFlex=\"50%\">\n          Pakao kroz koji svi prolazimo u pocetku\n        </div>\n      </div>\n      <div class=\"text-below-title\">\n        Nikad nisam zamišljao sebe kao nekog ko radi od 7 do 15. Od toga me podilazi\n        jeza niz kičmu. Mislim da ja mogu bolje od toga. Mislim da mogu bolje od par\n        stotina eura, toplog obroka i dodatka za javni prevoz. Sebe sam zamišljao\n        kao nekog ko živi od svog znanja, a ljudi mu se zahvaljuju na tome, po\n        mogućstvu u parama. U stotinama eura. Zanemarivši sva svoja druga zanimanja\n        odlučio sam da budem samo personalni trener i to puno radno vreme.\n      </div>\n    </div> -->\n"
+module.exports = "<!-- third pageeeeee     -->\n\n<div\n  class=\"third-page\"\n  fxLayout=\"column\"\n  fxLayoutAlign=\"center\"\n  fxLayoutGap=\"12px\"\n>\n  <div fxLayout=\"column\" class=\"image-bubble-container\" fxLayoutGap=\"12px\">\n    <div\n      class=\"talk-bubble tri-right border round btm-left-in\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div class=\"talktext title\">\n        <p>Pakao kroz koji svi prolazimo u početku</p>\n      </div>\n    </div>\n    <img\n      src=\"../../../assets/images/strongman-surprised\"\n      alt=\"Strongman\"\n      class=\"strongman-image\"\n    />\n  </div>\n  <div class=\"text-below-title\">\n    {{text}}\n  </div>\n</div>\n\n<!-- <div class=\"page\">\n    <div class=\"second-page-image-wrapper\"></div>\n    <div fxLayoutAlign=\"flex-end\" class=\"second-page-text\">\n      <div fxFlex=\"55%\" fxLayout=\"column\" fxFlex.lt-lg=\"100%\">\n        <div class=\"mat-display-3\">Namučio sam se u početku</div>\n        <div class=\"mat-display-1\">\n          <p>\n            Da vas zainteresujem... Ja sam onaj bajča što ima par hiljada onlajn\n            klijenata, a do pre par godina sam bio drvo, ali baš apsolutno drvo za\n            onlajn biznis. U početku sam lomio glavu kako da nađem klijente, a\n            posle mnogo objavljenih before after fotografija mojih klijenata i\n            edukativnih postova kad je krenulo nisam mogao da pohvatam kome pišem\n            na viber, kome šaljem pdf na email a kome u mesindžeru video sa\n            tehnikom izvođenja.\n          </p>\n          <p>\n            Da budem iskren nisam imao jasan plan. Znao sam samo da moram da radim\n            i da se trudim. Jedna stvar je povukla drugu, pa je došla treća... I\n            sad sam Kardašijan onlajn biznisa za trenere. Ne mislim na veličinu\n            zadnjice. Iako imam najveći stomak (nikad pločice) imam impozantan\n            broj klijenata. Kako?\n          </p>\n        </div>\n        <div fxLayout=\"row\" fxLayoutAlign=\"center\" fxLayoutAlign=\"center center\" fxFlex=\"100%\">\n          <button mat-flat-button>Nastavi sa čitanjem</button>\n        </div>\n      </div>\n    </div>\n  </div> -->\n<!-- <div class=\"second-page page\" fxLayout=\"column\" fxLayoutAlign=\"center center\" fxLayoutGap=\"12px\">\n      <div fxLayout=\"row\" fxLayoutAlign=\"center center\" class=\"image-title-container\">\n        <img src=\"../../../assets/images/strongman-surprised\" fxFlex=\"50%\" />\n        <div class=\"text-title\" fxFlex=\"50%\">\n          Pakao kroz koji svi prolazimo u pocetku\n        </div>\n      </div>\n      <div class=\"text-below-title\">\n        Nikad nisam zamišljao sebe kao nekog ko radi od 7 do 15. Od toga me podilazi\n        jeza niz kičmu. Mislim da ja mogu bolje od toga. Mislim da mogu bolje od par\n        stotina eura, toplog obroka i dodatka za javni prevoz. Sebe sam zamišljao\n        kao nekog ko živi od svog znanja, a ljudi mu se zahvaljuju na tome, po\n        mogućstvu u parama. U stotinama eura. Zanemarivši sva svoja druga zanimanja\n        odlučio sam da budem samo personalni trener i to puno radno vreme.\n      </div>\n    </div> -->\n"
 
 /***/ }),
 
@@ -488,13 +488,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FifthPageComponent", function() { return FifthPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 let FifthPageComponent = class FifthPageComponent {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     ngOnInit() {
+        this.http
+            .get('assets/text/fifth-page-text.txt', { responseType: 'text' })
+            .subscribe(data => (this.text = data));
     }
 };
+FifthPageComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 FifthPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-fifth-page',
@@ -592,67 +602,67 @@ let FirstPageComponent = class FirstPageComponent {
                 name: 'Petar',
                 city: 'Beograd',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-1.jpg'
             },
             {
                 name: 'Ivana',
                 city: 'Niš',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-1.jpg'
             },
             {
                 name: 'Dorđe',
                 city: 'Požarevac',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-2.jpg'
             },
             {
                 name: 'Nikola',
                 city: 'Novi Sad',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-3.jpg'
             },
             {
                 name: 'Zorana',
                 city: 'Leskovac',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-2.jpg'
             },
             {
                 name: 'Andrija',
                 city: 'Niš',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-4.jpg'
             },
             {
                 name: 'Miloš',
                 city: 'Kragujevac',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-5.jpg'
             },
             {
                 name: 'Nina',
                 city: 'Subotica',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-3.jpg'
             },
             {
                 name: 'Jovana',
                 city: 'Smederevo',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-4.jpg'
             },
             {
                 name: 'Ivana',
                 city: 'Beograd',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-5.jpg'
             },
             {
                 name: 'Petar',
                 city: 'Niš',
                 gender: 'M',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/male-6.jpg'
             },
             {
                 name: 'Vuk',
@@ -670,7 +680,7 @@ let FirstPageComponent = class FirstPageComponent {
                 name: 'Emilija',
                 city: 'Kragujevac',
                 gender: 'F',
-                image: '../../../assets/images/strongmen.jpg'
+                image: '../../../assets/images/new-user-images/female-6.jpg'
             },
             {
                 name: 'Anja',
@@ -786,13 +796,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FourthPageComponent", function() { return FourthPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 let FourthPageComponent = class FourthPageComponent {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     ngOnInit() {
+        this.http
+            .get('assets/text/fourth-page-text.txt', { responseType: 'text' })
+            .subscribe(data => (this.text = data));
     }
 };
+FourthPageComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 FourthPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-fourth-page',
@@ -896,7 +916,7 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "::ng-deep .mat-snack-bar-handset .mat-snack-bar-container {\n  height: 48px;\n  box-sizing: content-box;\n}\n\n.image {\n  width: 70px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n  border-radius: 4px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvbmV3LXVzZXItc25hY2tiYXIvbmV3LXVzZXItc25hY2tiYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL25ldy11c2VyLXNuYWNrYmFyL25ldy11c2VyLXNuYWNrYmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksWUFBQTtFQUNBLHVCQUFBO0FDREo7O0FER0E7RUFDSSxXQUFBO0VBQ0EseUJBQUE7S0FBQSxzQkFBQTtFQUNBLGtCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9uZXctdXNlci1zbmFja2Jhci9uZXctdXNlci1zbmFja2Jhci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG46Om5nLWRlZXAgLm1hdC1zbmFjay1iYXItaGFuZHNldCAubWF0LXNuYWNrLWJhci1jb250YWluZXIge1xuICAgIGhlaWdodDogNDhweDtcbiAgICBib3gtc2l6aW5nOiBjb250ZW50LWJveDtcbn1cbi5pbWFnZSB7XG4gICAgd2lkdGg6IDcwcHg7XG4gICAgb2JqZWN0LWZpdDogc2NhbGUtZG93bjtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgXG59IiwiOjpuZy1kZWVwIC5tYXQtc25hY2stYmFyLWhhbmRzZXQgLm1hdC1zbmFjay1iYXItY29udGFpbmVyIHtcbiAgaGVpZ2h0OiA0OHB4O1xuICBib3gtc2l6aW5nOiBjb250ZW50LWJveDtcbn1cblxuLmltYWdlIHtcbiAgd2lkdGg6IDcwcHg7XG4gIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbn0iXX0= */"
+module.exports = "::ng-deep .mat-snack-bar-handset .mat-snack-bar-container {\n  height: 48px;\n  box-sizing: content-box;\n}\n\npicture {\n  width: 48px;\n  height: 48px;\n}\n\n.image {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvbmV3LXVzZXItc25hY2tiYXIvbmV3LXVzZXItc25hY2tiYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL25ldy11c2VyLXNuYWNrYmFyL25ldy11c2VyLXNuYWNrYmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBQTtFQUNBLHVCQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxXQUFBO0VBQ0EsWUFBQTtBQ0VGOztBREFBO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtBQ0dGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbmV3LXVzZXItc25hY2tiYXIvbmV3LXVzZXItc25hY2tiYXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6Om5nLWRlZXAgLm1hdC1zbmFjay1iYXItaGFuZHNldCAubWF0LXNuYWNrLWJhci1jb250YWluZXIge1xuICBoZWlnaHQ6IDQ4cHg7XG4gIGJveC1zaXppbmc6IGNvbnRlbnQtYm94O1xufVxucGljdHVyZSB7XG4gIHdpZHRoOiA0OHB4O1xuICBoZWlnaHQ6IDQ4cHg7XG59XG4uaW1hZ2Uge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG4iLCI6Om5nLWRlZXAgLm1hdC1zbmFjay1iYXItaGFuZHNldCAubWF0LXNuYWNrLWJhci1jb250YWluZXIge1xuICBoZWlnaHQ6IDQ4cHg7XG4gIGJveC1zaXppbmc6IGNvbnRlbnQtYm94O1xufVxuXG5waWN0dXJlIHtcbiAgd2lkdGg6IDQ4cHg7XG4gIGhlaWdodDogNDhweDtcbn1cblxuLmltYWdlIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -964,13 +984,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageBeforeFormComponent", function() { return PageBeforeFormComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 let PageBeforeFormComponent = class PageBeforeFormComponent {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     ngOnInit() {
+        this.http
+            .get('assets/text/page-before-form-text.txt', { responseType: 'text' })
+            .subscribe(data => (this.text = data));
     }
 };
+PageBeforeFormComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 PageBeforeFormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-page-before-form',
@@ -1090,13 +1120,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SixthPageComponent", function() { return SixthPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 let SixthPageComponent = class SixthPageComponent {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     ngOnInit() {
+        this.http
+            .get('assets/text/sixth-page-text.txt', { responseType: 'text' })
+            .subscribe(data => (this.text = data));
     }
 };
+SixthPageComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 SixthPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-sixth-page',
@@ -1184,13 +1224,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThirdPageComponent", function() { return ThirdPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 let ThirdPageComponent = class ThirdPageComponent {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     ngOnInit() {
+        this.http
+            .get('assets/text/third-page-text.txt', { responseType: 'text' })
+            .subscribe(data => (this.text = data));
     }
 };
+ThirdPageComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 ThirdPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-third-page',

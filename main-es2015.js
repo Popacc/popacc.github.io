@@ -129,7 +129,7 @@ module.exports = "<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"space-b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n  \n    <picture> <img [src]=\"users[i].image\" alt=\"Slika\" class=\"image mat-elevation-z2\"/></picture>\n  <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <span >{{users[i].name}}, {{users[i].city}}</span>\n    <span>Upravo kreirao/la nalog</span>\n  </div>\n</div>\n"
+module.exports = "\n<div fxLayout=\"row\" fxLayoutGap=\"12px\" >\n  \n    <picture> <img [src]=\"users[i].image\" alt=\"Slika\" class=\"image mat-elevation-z2\"/></picture>\n  <div fxLayout=\"column\" fxLayoutAlign=\"center\">\n    <span >{{users[i].name}}, {{users[i].city}}</span>\n    <span *ngIf=\"users[i].gender === 'M'\">Upravo kreirao nalog</span>\n    <span *ngIf=\"users[i].gender === 'F'\">Upravo kreirala nalog</span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -591,81 +591,97 @@ let FirstPageComponent = class FirstPageComponent {
             {
                 name: 'Petar',
                 city: 'Beograd',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Ivana',
                 city: 'Niš',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Dorđe',
                 city: 'Požarevac',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Nikola',
                 city: 'Novi Sad',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Zorana',
                 city: 'Leskovac',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Andrija',
                 city: 'Niš',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Miloš',
                 city: 'Kragujevac',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Nina',
                 city: 'Subotica',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Jovana',
                 city: 'Smederevo',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Ivana',
                 city: 'Beograd',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Petar',
                 city: 'Niš',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Vuk',
                 city: 'Jagodina',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Milan',
                 city: 'Zrenjanin',
+                gender: 'M',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Emilija',
                 city: 'Kragujevac',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Anja',
                 city: 'Novi Sad',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             },
             {
                 name: 'Ivana',
                 city: 'Kruševac',
+                gender: 'F',
                 image: '../../../assets/images/strongmen.jpg'
             }
         ];
@@ -838,7 +854,7 @@ GraphPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n  width: 100%;\n  background-color: black;\n  padding: 12px 48px;\n}\n\n.header-logo-container {\n  margin-left: -23px;\n}\n\n.header-logo {\n  width: 130px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n}\n\nbutton {\n  background-color: black;\n  color: white;\n  font-size: 117%;\n  width: 100%;\n  height: 100%;\n  letter-spacing: 1px;\n  margin-right: -12px;\n}\n\n@media all and (max-width: 900px) {\n  .header {\n    padding: 12px 24px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0FDQ0Y7O0FERUE7RUFDRSxrQkFBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtFQUNELHlCQUFBO0tBQUEsc0JBQUE7QUNDRDs7QURHQTtFQUNFLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUNBRjs7QURHQTtFQUNFO0lBQ0Usa0JBQUE7RUNBRjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjpibGFjaztcbiAgcGFkZGluZzogMTJweCA0OHB4O1xufVxuXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgbWFyZ2luLWxlZnQ6IC0yM3B4O1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTMwcHg7XG4gb2JqZWN0LWZpdDogc2NhbGUtZG93bjtcblxufVxuXG5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDExNyU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gIG1hcmdpbi1yaWdodDogLTEycHg7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDkwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxufSIsIi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHBhZGRpbmc6IDEycHggNDhweDtcbn1cblxuLmhlYWRlci1sb2dvLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1sZWZ0OiAtMjNweDtcbn1cblxuLmhlYWRlci1sb2dvIHtcbiAgd2lkdGg6IDEzMHB4O1xuICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xufVxuXG5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDExNyU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gIG1hcmdpbi1yaWdodDogLTEycHg7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDkwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxufSJdfQ== */"
+module.exports = ".header {\n  width: 100%;\n  background-color: black;\n  padding: 12px 48px;\n}\n\n.header-logo-container {\n  margin-left: -24px;\n}\n\n.header-logo {\n  width: 130px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n}\n\nbutton {\n  background-color: black;\n  color: white;\n  font-size: 117%;\n  width: 100%;\n  height: 100%;\n  letter-spacing: 1px;\n  margin-right: -12px;\n}\n\n@media all and (max-width: 900px) {\n  .header {\n    padding: 12px 24px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0FDQ0Y7O0FERUE7RUFDRSxrQkFBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtFQUNELHlCQUFBO0tBQUEsc0JBQUE7QUNDRDs7QURHQTtFQUNFLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUNBRjs7QURHQTtFQUNFO0lBQ0Usa0JBQUE7RUNBRjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjpibGFjaztcbiAgcGFkZGluZzogMTJweCA0OHB4O1xufVxuXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgbWFyZ2luLWxlZnQ6IC0yNHB4O1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTMwcHg7XG4gb2JqZWN0LWZpdDogc2NhbGUtZG93bjtcblxufVxuXG5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDExNyU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gIG1hcmdpbi1yaWdodDogLTEycHg7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDkwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxufSIsIi5oZWFkZXIge1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHBhZGRpbmc6IDEycHggNDhweDtcbn1cblxuLmhlYWRlci1sb2dvLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1sZWZ0OiAtMjRweDtcbn1cblxuLmhlYWRlci1sb2dvIHtcbiAgd2lkdGg6IDEzMHB4O1xuICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xufVxuXG5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDExNyU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gIG1hcmdpbi1yaWdodDogLTEycHg7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDkwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxufSJdfQ== */"
 
 /***/ }),
 

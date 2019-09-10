@@ -2,7 +2,7 @@ Do pre par godina sam bio drvo, za onlajn biznis, koje je provodilo 16 sati dnev
 Svako ko odabere posao personalnog trenera veruje da će raditi za sebe i imati slobodu. 
 U teoriji imaš dobru zaradu i sam određuješ kad i koliko radiš. 
 U realnosti imamo ili premalo klijenata ili premalo slobodnog vremena. 
-Neizvesnost nesigurnih primanja nas vuče da radimo i po 18 sati dnevno i život nam se neretko svede na kaficu u kafiću pored 
+<p>Neizvesnost nesigurnih primanja nas vuče da radimo i po 18 sati dnevno i život nam se neretko svede na kaficu u kafiću pored 
 teretane između dva treninga. 
 Meni je radni dan počinjao u 7, kada treniraju ovi što vole rekreaciju pre posla a završavao se i u 11 
-uveče jer ima programera koji rade u drugim časovnim zonama.
+uveče jer ima programera koji rade u drugim časovnim zonama.</p>

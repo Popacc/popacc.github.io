@@ -1,4 +1,4 @@
 Anketirao sam svoje ortake, onlajn trenere, šta ih najviše nervira kod postojećih aplikacija.
 Pitao sam i ove google/whatsapp/viber/sms trenere kako bi im odgovaralo.
 Slao sam ankete svojim klijentima koje sam već trenirao preko tri različite aplikacije. Pokazalo se da smo svi imali približno ista očekivanja i zamerke.
- Da bude jednostavno, brzo i intuitivno. 
+ Da bude <b>jednostavno, brzo i intuitivno</b>. 

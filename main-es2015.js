@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" fxLayout=\"column\">\n  <app-first-page></app-first-page>\n  <app-second-page></app-second-page>\n  <app-third-page></app-third-page>\n  <app-fourth-page></app-fourth-page>\n  <app-fifth-page></app-fifth-page>\n  <app-graph-page></app-graph-page>\n  <app-sixth-page></app-sixth-page>\n  <app-page-before-form></app-page-before-form>\n  <app-form-page></app-form-page>\n  <app-testimonials></app-testimonials>\n  <app-final-page></app-final-page>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div class=\"container\" fxLayout=\"column\">\n  <app-header></app-header>\n\n  <router-outlet></router-outlet>\n  <app-footer></app-footer>\n</div>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <!-- --------------------MOBILE------------------- -->\n  <div *ngIf=\"screenWidth <= 1000; else desktop\">\n    <div\n      class=\"final-page\"\n      fxLayout=\"column\"\n      fxLayoutAlign=\"center center\"\n      fxLayoutGap=\"30px\"\n    >\n      <div\n        fxLayoutAlign=\"center center\"\n        fxLayout=\"column\"\n        class=\"text-above-book\"\n        fxLayoutGap=\"12px\"\n      >\n        <span class=\"page-title title\"><b>Kako do prvih klijenata?</b></span>\n        <p>\n          Ko su tvoji klijenti? <br />\n          Kako ih privući?<br />\n          Kako ih zadržati?\n        </p>\n        <span class=\"last-sentence\"\n          >Prijavi se i preuzmi priručnik <b>BESPLATNO</b>.</span\n        >\n      </div>\n      <img\n        src=\"../../../assets/images/strongman-book.jpg\"\n        alt=\"Knjiga\"\n        class=\"mat-elevation-z5\"\n      />\n      <form\n        fxLayout=\"column\"\n        fxLayoutAlign=\"start center\"\n        fxLayoutGap=\"30px\"\n        #form=\"ngForm\"\n      >\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"Ime i prezime...\"\n            required\n            pattern=\"[a-zA-Z ]*\"\n            [(ngModel)]=\"userForm.name\"\n            name=\"name\"\n            #name=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n            >Ime i prezime može sadržati samo slova</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n            >Ime i prezime je obavezno</mat-error\n          >\n        </mat-form-field>\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"E-mail...\"\n            required\n            email\n            [(ngModel)]=\"userForm.email\"\n            name=\"email\"\n            #email=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n            >E-mail je obavezan</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n            >E-mail nije ispravan</mat-error\n          >\n        </mat-form-field>\n        <button\n          mat-flat-button\n          class=\"pulse-button mat-elevation-z7\"\n          type=\"submit\"\n          (click)=\"form.valid && sendForm(); formSubmitted = true\"\n        >\n          Preuzmi priručnik\n        </button>\n        <mat-error\n          *ngIf=\"formSubmitted && mailService.userExists\"\n          class=\"user-exists\"\n        >\n          Korisnik sa tim E-mailom već postoji!\n        </mat-error>\n      </form>\n    </div>\n  </div>\n\n  <!-- --------------------DESKTOP------------------- -->\n  <ng-template #desktop>\n    <div\n      class=\"final-page desktop-wrapper\"\n      fxLayout=\"row\"\n      fxLayoutAlign=\"space-evenly\"\n      fxLayoutGap=\"48px\"\n    >\n      <div class=\"image-wrapper\">\n        <img\n          src=\"../../../assets/images/strongman-book.jpg\"\n          alt=\"Knjiga\"\n          class=\"mat-elevation-z5\"\n        />\n      </div>\n      <div\n        fxLayout=\"column\"\n        fxLayoutAlign=\"center center\"\n        fxLayoutGap=\"48px\"\n        class=\"mat-elevation-z5 right-text\"\n      >\n        <div\n          fxLayoutAlign=\"space-evenly center\"\n          fxLayout=\"column\"\n          class=\"text-above-book\"\n          fxLayoutGap=\"48px\"\n        >\n          <span class=\"page-title title\"><b>Kako do prvih klijenata?</b></span>\n          <p>\n            Ko su tvoji klijenti? <br />\n            Kako ih privući?<br />\n            Kako ih zadržati?\n          </p>\n          <span class=\"last-sentence\"\n            >Prijavi se i preuzmi priručnik <b>BESPLATNO</b>.\n          </span>\n        </div>\n\n        <form\n          fxLayout=\"column\"\n          fxLayoutAlign=\"start center\"\n          fxLayoutGap=\"30px\"\n          #form=\"ngForm\"\n        >\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"Ime i prezime...\"\n              required\n              pattern=\"[a-zA-Z ]*\"\n              [(ngModel)]=\"userForm.name\"\n              name=\"name\"\n              #name=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n              >Ime i prezime može sadržati samo slova</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n              >Ime i prezime je obavezno</mat-error\n            >\n          </mat-form-field>\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"E-mail...\"\n              required\n              email\n              [(ngModel)]=\"userForm.email\"\n              name=\"email\"\n              #email=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n              >E-mail je obavezan</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n              >E-mail nije ispravan</mat-error\n            >\n          </mat-form-field>\n          <button\n            mat-flat-button\n            class=\"pulse-button mat-elevation-z7\"\n            type=\"submit\"\n            (click)=\"form.valid && sendForm(); formSubmitted = true\"\n          >\n            Preuzmi priručnik\n          </button>\n          <mat-error\n            *ngIf=\"formSubmitted && mailService.userExists\"\n            class=\"user-exists\"\n          >\n            Korisnik sa tim E-mailom već postoji!\n          </mat-error>\n        </form>\n      </div>\n    </div>\n  </ng-template>\n</div>\n"
+module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <!-- --------------------MOBILE------------------- -->\n  <div *ngIf=\"screenWidth <= 1000; else desktop\">\n    <div\n      class=\"final-page\"\n      fxLayout=\"column\"\n      fxLayoutAlign=\"center center\"\n      fxLayoutGap=\"30px\"\n    >\n      <div\n        fxLayoutAlign=\"center center\"\n        fxLayout=\"column\"\n        class=\"text-above-book\"\n        fxLayoutGap=\"12px\"\n      >\n        <span class=\"page-title title\"><b>Kako do prvih klijenata?</b></span>\n        <p>\n          Ko su tvoji klijenti? <br />\n          Kako ih privući?<br />\n          Kako ih zadržati?\n        </p>\n        <span class=\"last-sentence\"\n          >Prijavi se i preuzmi priručnik <b>BESPLATNO</b></span\n        >\n      </div>\n      <img\n        src=\"../../../assets/images/strongman-book.jpg\"\n        alt=\"Knjiga\"\n        class=\"mat-elevation-z5\"\n      />\n      <form\n        fxLayout=\"column\"\n        fxLayoutAlign=\"start center\"\n        fxLayoutGap=\"30px\"\n        #form=\"ngForm\"\n      >\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"Ime i prezime...\"\n            required\n            pattern=\"[a-zA-Z ]*\"\n            [(ngModel)]=\"userForm.name\"\n            name=\"name\"\n            #name=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n            >Ime i prezime može sadržati samo slova</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n            >Ime i prezime je obavezno</mat-error\n          >\n        </mat-form-field>\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"E-mail...\"\n            required\n            email\n            [(ngModel)]=\"userForm.email\"\n            name=\"email\"\n            #email=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n            >E-mail je obavezan</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n            >E-mail nije ispravan</mat-error\n          >\n        </mat-form-field>\n        <button\n          mat-flat-button\n          class=\"pulse-button mat-elevation-z7\"\n          type=\"submit\"\n          (click)=\"form.valid && sendForm(); formSubmitted = true\"\n        >\n          Preuzmi priručnik\n        </button>\n        <mat-error\n          *ngIf=\"formSubmitted && mailService.userExists\"\n          class=\"user-exists\"\n        >\n          Korisnik sa tim E-mailom već postoji!\n        </mat-error>\n      </form>\n    </div>\n  </div>\n\n  <!-- --------------------DESKTOP------------------- -->\n  <ng-template #desktop>\n    <div\n      class=\"final-page desktop-wrapper\"\n      fxLayout=\"row\"\n      fxLayoutAlign=\"space-evenly\"\n      fxLayoutGap=\"48px\"\n    >\n      <div class=\"image-wrapper\">\n        <img\n          src=\"../../../assets/images/strongman-book.jpg\"\n          alt=\"Knjiga\"\n          class=\"mat-elevation-z5\"\n        />\n      </div>\n      <div\n        fxLayout=\"column\"\n        fxLayoutAlign=\"center center\"\n        fxLayoutGap=\"48px\"\n        class=\"mat-elevation-z5 right-text\"\n      >\n        <div\n          fxLayoutAlign=\"space-evenly center\"\n          fxLayout=\"column\"\n          class=\"text-above-book\"\n          fxLayoutGap=\"48px\"\n        >\n          <span class=\"page-title title\"><b>Kako do prvih klijenata?</b></span>\n          <p>\n            Ko su tvoji klijenti? <br />\n            Kako ih privući?<br />\n            Kako ih zadržati?\n          </p>\n          <span class=\"last-sentence\"\n            >Prijavi se i preuzmi priručnik <b>BESPLATNO</b>\n          </span>\n        </div>\n\n        <form\n          fxLayout=\"column\"\n          fxLayoutAlign=\"start center\"\n          fxLayoutGap=\"30px\"\n          #form=\"ngForm\"\n        >\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"Ime i prezime...\"\n              required\n              pattern=\"[a-zA-Z ]*\"\n              [(ngModel)]=\"userForm.name\"\n              name=\"name\"\n              #name=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n              >Ime i prezime može sadržati samo slova</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n              >Ime i prezime je obavezno</mat-error\n            >\n          </mat-form-field>\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"E-mail...\"\n              required\n              email\n              [(ngModel)]=\"userForm.email\"\n              name=\"email\"\n              #email=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n              >E-mail je obavezan</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n              >E-mail nije ispravan</mat-error\n            >\n          </mat-form-field>\n          <button\n            mat-flat-button\n            class=\"pulse-button mat-elevation-z7\"\n            type=\"submit\"\n            (click)=\"form.valid && sendForm(); formSubmitted = true\"\n          >\n            Preuzmi priručnik\n          </button>\n          <mat-error\n            *ngIf=\"formSubmitted && mailService.userExists\"\n            class=\"user-exists\"\n          >\n            Korisnik sa tim E-mailom već postoji!\n          </mat-error>\n        </form>\n      </div>\n    </div>\n  </ng-template>\n</div>\n"
 
 /***/ }),
 
@@ -63,7 +63,18 @@ module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <!-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"first-page-wrapper\" fxLayout=\"column\">\n  <app-header></app-header>\n\n  <!-- ------------------MOBILE---------------- -->\n  <div *ngIf=\"screenWidth <= 1000; else desktop\">\n    <div\n      fxLayout=\"column\"\n      class=\"first-page\"\n      fxLayoutGap=\"36px\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div fxLayoutGap=\"24px\" fxLayout=\"column\" class=\"text-below-header\">\n        <div class=\"page-title title\" fxLayout=\"column\" fxLayoutGap=\"12px\">\n          <span>Onlajn personal treneri pažnja!</span>\n          <div>\n            Jedini softver koji će Vam ikada trebati\n          </div>\n        </div>\n        <div class=\"below-title\" fxLayout=\"column\" fxLayoutGap=\"6px\">\n          Zaboravite viber, email, whatsapp, google doc, pdf, youtube, ...\n          <br />\n          sada vam je\n          <b>sve na jednom mestu.</b>\n          <span\n            >Uštedite vreme i\n            <b>impresionirajte svoje klijente</b>\n          </span>\n        </div>\n      </div>\n      <div>\n        <iframe\n          title=\"Strongman video\"\n          [src]=\"safeURL\"\n          frameborder=\"0\"\n          allowfullscreen\n          class=\"mat-elevation-z5\"\n        ></iframe>\n      </div>\n      <form\n        fxLayout=\"column\"\n        fxLayoutAlign=\"start center\"\n        fxLayoutGap=\"30px\"\n        #form=\"ngForm\"\n      >\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"Ime i prezime...\"\n            required\n            pattern=\"[a-zA-Z ]*\"\n            [(ngModel)]=\"userForm.name\"\n            name=\"name\"\n            #name=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n            >Ime i prezime može sadržati samo slova</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n            >Ime i prezime je obavezno</mat-error\n          >\n        </mat-form-field>\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"E-mail...\"\n            required\n            email\n            [(ngModel)]=\"userForm.email\"\n            name=\"email\"\n            #email=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n            >E-mail je obavezan</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n            >E-mail nije ispravan</mat-error\n          >\n        </mat-form-field>\n        <button\n          mat-flat-button\n          class=\"pulse-button mat-elevation-z7\"\n          type=\"submit\"\n          (click)=\"form.valid && sendForm(); formSubmitted = true\"\n        >\n          Probaj <span class=\"letter-spacer\">BESPLATNO</span> 30 dana\n        </button>\n        <mat-error\n          *ngIf=\"formSubmitted && mailService.userExists\"\n          class=\"user-exists\"\n        >\n          Korisnik sa tim E-mailom već postoji!\n        </mat-error>\n      </form>\n    </div>\n  </div>\n\n  <!-- ------------------DESKTOP--------------------- -->\n  <ng-template #desktop>\n    <div\n      fxLayout=\"row\"\n      class=\"first-page desktop-wrapper\"\n      fxLayoutAlign=\"space-between\"\n      fxLayoutGap=\"48px\"\n    >\n      <div\n        fxLayout=\"column\"\n        fxLayoutGap=\"48px\"\n        fxLayoutAlign=\"start center\"\n        fxFlex=\"50%\"\n      >\n        <div class=\"page-title title\" fxLayout=\"column\" fxLayoutGap=\"12px\">\n          <span>Onlajn personal treneri pažnja!</span>\n          <div>\n            Jedini softver koji će Vam ikada trebati\n          </div>\n        </div>\n        <div class=\"video-wrapper mat-elevation-z5\">\n          <iframe\n            title=\"Strongman video\"\n            [src]=\"safeURL\"\n            frameborder=\"0\"\n            allowfullscreen\n          ></iframe>\n        </div>\n      </div>\n      <div\n        fxLayout=\"column\"\n        fxLayoutAlign=\"space-evenly center\"\n        fxLayoutGap=\"36px\"\n        fxFlex=\"40%\"\n        class=\"mat-elevation-z5 text-right\"\n      >\n        <div\n          fxLayoutGap=\"60px\"\n          fxLayout=\"column\"\n          class=\"text-below-header\"\n          fxLayoutAlign=\"end center\"\n        >\n          <div class=\"below-title\">\n            Zaboravite viber, email, whatsapp, google doc, pdf, youtube, ...\n            sada vam je\n            <b>sve na jednom mestu. </b><br />\n            <span>Uštedite vreme i <b>impresionirajte svoje klijente</b></span>\n          </div>\n        </div>\n        <form\n          fxLayout=\"column\"\n          fxLayoutAlign=\"center center\"\n          fxLayoutGap=\"30px\"\n          #form=\"ngForm\"\n        >\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"Ime i prezime...\"\n              required\n              pattern=\"[a-zA-Z ]*\"\n              [(ngModel)]=\"userForm.name\"\n              name=\"name\"\n              #name=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n              >Ime i prezime može sadržati samo slova</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n              >Ime i prezime je obavezno</mat-error\n            >\n          </mat-form-field>\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"E-mail...\"\n              required\n              email\n              [(ngModel)]=\"userForm.email\"\n              name=\"email\"\n              #email=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n              >E-mail je obavezan</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n              >E-mail nije ispravan</mat-error\n            >\n          </mat-form-field>\n          <button\n            mat-flat-button\n            class=\"pulse-button mat-elevation-z7\"\n            type=\"submit\"\n            (click)=\"form.valid && sendForm(); formSubmitted = true\"\n          >\n            Probaj <span class=\"letter-spacer\">BESPLATNO</span> 30 dana\n          </button>\n          <mat-error\n            *ngIf=\"formSubmitted && mailService.userExists\"\n            class=\"user-exists\"\n          >\n            Korisnik sa tim E-mailom već postoji!\n          </mat-error>\n        </form>\n      </div>\n    </div>\n  </ng-template>\n</div>\n"
+module.exports = "<div class=\"first-page-wrapper\" fxLayout=\"column\">\n  <!-- ------------------MOBILE---------------- -->\n  <div *ngIf=\"screenWidth <= 1000; else desktop\">\n    <div\n      fxLayout=\"column\"\n      class=\"first-page\"\n      fxLayoutGap=\"36px\"\n      fxLayoutAlign=\"center center\"\n    >\n      <div fxLayoutGap=\"24px\" fxLayout=\"column\" class=\"text-below-header\">\n        <div class=\"page-title title\" fxLayout=\"column\" fxLayoutGap=\"12px\">\n          <span>Onlajn personal treneri pažnja!</span>\n          <div>\n            Jedini softver koji će Vam ikada trebati\n          </div>\n        </div>\n        <div class=\"below-title\" fxLayout=\"column\" fxLayoutGap=\"6px\">\n          Zaboravite viber, email, whatsapp, google doc, pdf, youtube, ...\n          <br />\n          sada vam je\n          <b>sve na jednom mestu.</b>\n          <span\n            >Uštedite vreme i\n            <b>impresionirajte svoje klijente</b>\n          </span>\n        </div>\n      </div>\n      <div>\n        <iframe\n          title=\"Strongman video\"\n          [src]=\"safeURL\"\n          frameborder=\"0\"\n          allowfullscreen\n          class=\"mat-elevation-z5\"\n        ></iframe>\n      </div>\n      <form\n        fxLayout=\"column\"\n        fxLayoutAlign=\"start center\"\n        fxLayoutGap=\"30px\"\n        #form=\"ngForm\"\n      >\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"Ime i prezime...\"\n            required\n            pattern=\"[a-zA-Z ]*\"\n            [(ngModel)]=\"userForm.name\"\n            name=\"name\"\n            #name=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n            >Ime i prezime može sadržati samo slova</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n            >Ime i prezime je obavezno</mat-error\n          >\n        </mat-form-field>\n        <mat-form-field\n          floatLabel=\"never\"\n          fxLayoutAlign=\"center center\"\n          class=\"mat-elevation-z3\"\n        >\n          <input\n            matInput\n            placeholder=\"E-mail...\"\n            required\n            email\n            [(ngModel)]=\"userForm.email\"\n            name=\"email\"\n            #email=\"ngModel\"\n          />\n          <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n            >E-mail je obavezan</mat-error\n          >\n          <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n            >E-mail nije ispravan</mat-error\n          >\n        </mat-form-field>\n        <button\n          mat-flat-button\n          class=\"pulse-button mat-elevation-z7\"\n          type=\"submit\"\n          (click)=\"form.valid && sendForm(); formSubmitted = true\"\n        >\n          Probaj <span class=\"letter-spacer\">BESPLATNO</span> 30 dana\n        </button>\n        <mat-error\n          *ngIf=\"formSubmitted && mailService.userExists\"\n          class=\"user-exists\"\n        >\n          Korisnik sa tim E-mailom već postoji!\n        </mat-error>\n      </form>\n    </div>\n  </div>\n\n  <!-- ------------------DESKTOP--------------------- -->\n  <ng-template #desktop>\n    <div\n      fxLayout=\"row\"\n      class=\"first-page desktop-wrapper\"\n      fxLayoutAlign=\"space-between\"\n      fxLayoutGap=\"48px\"\n    >\n      <div\n        fxLayout=\"column\"\n        fxLayoutGap=\"48px\"\n        fxLayoutAlign=\"start center\"\n        fxFlex=\"50%\"\n      >\n        <div class=\"page-title title\" fxLayout=\"column\" fxLayoutGap=\"12px\">\n          <span>Onlajn personal treneri pažnja!</span>\n          <div>\n            Jedini softver koji će Vam ikada trebati\n          </div>\n        </div>\n        <div class=\"video-wrapper mat-elevation-z5\">\n          <iframe\n            title=\"Strongman video\"\n            [src]=\"safeURL\"\n            frameborder=\"0\"\n            allowfullscreen\n          ></iframe>\n        </div>\n      </div>\n      <div\n        fxLayout=\"column\"\n        fxLayoutAlign=\"space-evenly center\"\n        fxLayoutGap=\"36px\"\n        fxFlex=\"40%\"\n        class=\"mat-elevation-z5 text-right\"\n      >\n        <div\n          fxLayoutGap=\"60px\"\n          fxLayout=\"column\"\n          class=\"text-below-header\"\n          fxLayoutAlign=\"end center\"\n        >\n          <div class=\"below-title\">\n            Zaboravite viber, email, whatsapp, google doc, pdf, youtube, ...\n            sada vam je\n            <b>sve na jednom mestu. </b><br />\n            <span>Uštedite vreme i <b>impresionirajte svoje klijente</b></span>\n          </div>\n        </div>\n        <form\n          fxLayout=\"column\"\n          fxLayoutAlign=\"center center\"\n          fxLayoutGap=\"30px\"\n          #form=\"ngForm\"\n        >\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"Ime i prezime...\"\n              required\n              pattern=\"[a-zA-Z ]*\"\n              [(ngModel)]=\"userForm.name\"\n              name=\"name\"\n              #name=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && name.hasError('pattern')\"\n              >Ime i prezime može sadržati samo slova</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && name.hasError('required')\"\n              >Ime i prezime je obavezno</mat-error\n            >\n          </mat-form-field>\n          <mat-form-field\n            floatLabel=\"never\"\n            fxLayoutAlign=\"center center\"\n            class=\"mat-elevation-z3\"\n          >\n            <input\n              matInput\n              placeholder=\"E-mail...\"\n              required\n              email\n              [(ngModel)]=\"userForm.email\"\n              name=\"email\"\n              #email=\"ngModel\"\n            />\n            <mat-error *ngIf=\"formSubmitted && email.hasError('required')\"\n              >E-mail je obavezan</mat-error\n            >\n            <mat-error *ngIf=\"formSubmitted && email.hasError('email')\"\n              >E-mail nije ispravan</mat-error\n            >\n          </mat-form-field>\n          <button\n            mat-flat-button\n            class=\"pulse-button mat-elevation-z7\"\n            type=\"submit\"\n            (click)=\"form.valid && sendForm(); formSubmitted = true\"\n          >\n            Probaj <span class=\"letter-spacer\">BESPLATNO</span> 30 dana\n          </button>\n          <mat-error\n            *ngIf=\"formSubmitted && mailService.userExists\"\n            class=\"user-exists\"\n          >\n            Korisnik sa tim E-mailom već postoji!\n          </mat-error>\n        </form>\n      </div>\n    </div>\n  </ng-template>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/footer/footer.component.html":
+/*!******************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/footer/footer.component.html ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayoutAlign=\"center center\" class=\"wrapper\">\n  <div\n    class=\"footer desktop-wrapper\"\n    fxLayoutAlign=\"space-between center\"\n    fxLayout=\"row\"\n  >\n    <!-- <div\n      class=\"header-logo-container\"\n      fxLayoutAlign=\"center center\"\n      routerLink=\"\"\n    >\n      <img\n        src=\"../../../assets/images/logo.svg\"\n        class=\"header-logo\"\n        alt=\"Logotip\"\n      />\n    </div> -->\n    <div fxLayoutGap=\"12px\" fxLayout=\"column\">\n      <div>\n        <span class=\"copyright\">©2019 Moj-trening.com </span> <br />\n        <span>Sva prava zadržana. </span> <br />\n        <span\n          >Zabranjeno je neovlašćeno kopiranje i distribucija sadržaja.</span\n        >\n      </div>\n\n      <a routerLink=\"/terms\"\n        >Politka privatnosti i opšti uslovi korišćenja sajta</a\n      >\n    </div>\n    <div class=\"contact\" fxLayout=\"column\" fxLayoutGap=\"12px\">\n      <span>Kontakt</span>\n      <a href=\"mailto:milan@strongmanmetod.online\"\n        >milan@strongmanmetod.online</a\n      >\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -107,7 +118,18 @@ module.exports = "<!-- ----------------------MOBILE-------------------- -->\n<di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <div\n    class=\"header desktop-wrapper\"\n    fxLayout=\"row\"\n    fxLayoutAlign=\"space-between center\"\n  >\n    <div class=\"header-logo-container\" fxLayoutAlign=\"center center\">\n      <img\n        src=\"../../../assets/images/logo.svg\"\n        class=\"header-logo\"\n        alt=\"Logotip\"\n      />\n    </div>\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n      <button mat-raised-button>Uloguj se</button>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <div\n    class=\"header desktop-wrapper\"\n    fxLayout=\"row\"\n    fxLayoutAlign=\"space-between center\"\n  >\n    <div\n      class=\"header-logo-container\"\n      fxLayoutAlign=\"center center\"\n      routerLink=\"\"\n    >\n      <img\n        src=\"../../../assets/images/logo.svg\"\n        class=\"header-logo\"\n        alt=\"Logotip\"\n      />\n    </div>\n    <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n      <button mat-raised-button>Uloguj se</button>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/main/main.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/main/main.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-first-page></app-first-page>\n<app-second-page></app-second-page>\n<app-third-page></app-third-page>\n<app-fourth-page></app-fourth-page>\n<app-fifth-page></app-fifth-page>\n<app-graph-page></app-graph-page>\n<app-sixth-page></app-sixth-page>\n<app-page-before-form></app-page-before-form>\n<app-form-page></app-form-page>\n<app-testimonials></app-testimonials>\n<app-final-page></app-final-page>\n"
 
 /***/ }),
 
@@ -155,6 +177,17 @@ module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <di
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/terms/terms.component.html":
+/*!****************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/terms/terms.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" fxLayoutAlign=\"center center\">\n  <button mat-icon-button class=\"back-button\" (click)=\"goBack()\">\n    <mat-icon>\n      arrow_back\n    </mat-icon>\n  </button>\n  <div class=\"desktop-wrapper\" fxLayout=\"column\" fxLayoutAlign=\"center center\">\n    <div class=\"title\">\n      POLITIKA PRIVATNOSTI I OPŠTI USLOVI KORIŠĆENJA SAJTA\n    </div>\n    <div *ngFor=\"let termText of termsTexts\">\n      <div class=\"subtitle\">{{ termText.title }}</div>\n      <div class=\"content\">{{ termText.text }}</div>\n      <div *ngFor=\"let subterm of termText.subtexts\">\n        <div class=\"subtitle-2\">{{ subterm.title }}</div>\n        <div *ngIf=\"subterm.title === cookiesTitle\" id=\"cookies\"></div>\n        <div class=\"content\">{{ subterm.text }}</div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/testimonials/testimonials.component.html":
 /*!******************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/testimonials/testimonials.component.html ***!
@@ -190,15 +223,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
+/* harmony import */ var _pages_main_main_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/main/main.component */ "./src/app/pages/main/main.component.ts");
 
 
 
-const routes = [];
+
+
+const routes = [
+    { path: 'terms', component: _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_3__["TermsComponent"] },
+    { path: '', component: _pages_main_main_component__WEBPACK_IMPORTED_MODULE_4__["MainComponent"] }
+];
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+        imports: [
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { scrollPositionRestoration: 'enabled' })
+        ],
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })
 ], AppRoutingModule);
@@ -282,6 +324,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_sixth_page_sixth_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/sixth-page/sixth-page.component */ "./src/app/pages/sixth-page/sixth-page.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _pages_testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/testimonials/testimonials.component */ "./src/app/pages/testimonials/testimonials.component.ts");
+/* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
+/* harmony import */ var _pages_footer_footer_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/footer/footer.component */ "./src/app/pages/footer/footer.component.ts");
+/* harmony import */ var _pages_main_main_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/main/main.component */ "./src/app/pages/main/main.component.ts");
+
+
+
 
 
 
@@ -323,7 +371,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_page_before_form_page_before_form_component__WEBPACK_IMPORTED_MODULE_18__["PageBeforeFormComponent"],
             _pages_fifth_page_fifth_page_component__WEBPACK_IMPORTED_MODULE_19__["FifthPageComponent"],
             _pages_sixth_page_sixth_page_component__WEBPACK_IMPORTED_MODULE_20__["SixthPageComponent"],
-            _pages_testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_22__["TestimonialsComponent"]
+            _pages_testimonials_testimonials_component__WEBPACK_IMPORTED_MODULE_22__["TestimonialsComponent"],
+            _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_23__["TermsComponent"],
+            _pages_footer_footer_component__WEBPACK_IMPORTED_MODULE_24__["FooterComponent"],
+            _pages_main_main_component__WEBPACK_IMPORTED_MODULE_25__["MainComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -694,6 +745,48 @@ FirstPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/pages/footer/footer.component.scss":
+/*!****************************************************!*\
+  !*** ./src/app/pages/footer/footer.component.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".wrapper {\n  background-color: black;\n}\n\n.footer {\n  padding: 48px 0px;\n  text-align: center;\n  color: #f3f3f3;\n}\n\n.copyright {\n  font-size: 21px;\n}\n\n.header-logo-container {\n  margin-left: -24px;\n  cursor: pointer;\n  outline: none;\n}\n\n.header-logo {\n  width: 300px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n}\n\na {\n  -webkit-text-decoration-color: #f3f3f3;\n          text-decoration-color: #f3f3f3;\n  color: #f3f3f3;\n}\n\n.contact {\n  text-align: right;\n}\n\n.contact > span {\n  font-size: 21px;\n}\n\n@media all and (max-width: 1000px) {\n  .footer {\n    padding: 12px 24px;\n  }\n\n  .header-logo-container {\n    margin-left: -24px;\n  }\n\n  .header-logo {\n    width: 130px;\n    -o-object-fit: scale-down;\n       object-fit: scale-down;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsY0FBQTtBQ0VGOztBREFBO0VBQ0UsZUFBQTtBQ0dGOztBRERBO0VBQ0Usa0JBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtBQ0lGOztBRERBO0VBQ0UsWUFBQTtFQUNBLHlCQUFBO0tBQUEsc0JBQUE7QUNJRjs7QURGQTtFQUNFLHNDQUFBO1VBQUEsOEJBQUE7RUFDQSxjQUFBO0FDS0Y7O0FESEE7RUFDRSxpQkFBQTtBQ01GOztBREpBO0VBQ0UsZUFBQTtBQ09GOztBRExBO0VBQ0U7SUFDRSxrQkFBQTtFQ1FGOztFRE5BO0lBQ0Usa0JBQUE7RUNTRjs7RUROQTtJQUNFLFlBQUE7SUFDQSx5QkFBQTtPQUFBLHNCQUFBO0VDU0Y7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud3JhcHBlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxuLmZvb3RlciB7XG4gIHBhZGRpbmc6IDQ4cHggMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiAjZjNmM2YzO1xufVxuLmNvcHlyaWdodCB7XG4gIGZvbnQtc2l6ZTogMjFweDtcbn1cbi5oZWFkZXItbG9nby1jb250YWluZXIge1xuICBtYXJnaW4tbGVmdDogLTI0cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgb3V0bGluZTogbm9uZTtcbn1cblxuLmhlYWRlci1sb2dvIHtcbiAgd2lkdGg6IDMwMHB4O1xuICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xufVxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbi1jb2xvcjogI2YzZjNmMztcbiAgY29sb3I6ICNmM2YzZjM7XG59XG4uY29udGFjdCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuLmNvbnRhY3QgPiBzcGFuIHtcbiAgZm9udC1zaXplOiAyMXB4O1xufVxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5mb290ZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxuICAuaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgICBtYXJnaW4tbGVmdDogLTI0cHg7XG4gIH1cblxuICAuaGVhZGVyLWxvZ28ge1xuICAgIHdpZHRoOiAxMzBweDtcbiAgICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xuICB9XG59XG4iLCIud3JhcHBlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxuXG4uZm9vdGVyIHtcbiAgcGFkZGluZzogNDhweCAwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6ICNmM2YzZjM7XG59XG5cbi5jb3B5cmlnaHQge1xuICBmb250LXNpemU6IDIxcHg7XG59XG5cbi5oZWFkZXItbG9nby1jb250YWluZXIge1xuICBtYXJnaW4tbGVmdDogLTI0cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgb3V0bGluZTogbm9uZTtcbn1cblxuLmhlYWRlci1sb2dvIHtcbiAgd2lkdGg6IDMwMHB4O1xuICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xufVxuXG5hIHtcbiAgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiAjZjNmM2YzO1xuICBjb2xvcjogI2YzZjNmMztcbn1cblxuLmNvbnRhY3Qge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cblxuLmNvbnRhY3QgPiBzcGFuIHtcbiAgZm9udC1zaXplOiAyMXB4O1xufVxuXG5AbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLmZvb3RlciB7XG4gICAgcGFkZGluZzogMTJweCAyNHB4O1xuICB9XG5cbiAgLmhlYWRlci1sb2dvLWNvbnRhaW5lciB7XG4gICAgbWFyZ2luLWxlZnQ6IC0yNHB4O1xuICB9XG5cbiAgLmhlYWRlci1sb2dvIHtcbiAgICB3aWR0aDogMTMwcHg7XG4gICAgb2JqZWN0LWZpdDogc2NhbGUtZG93bjtcbiAgfVxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pages/footer/footer.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/pages/footer/footer.component.ts ***!
+  \**************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let FooterComponent = class FooterComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-footer',
+        template: __webpack_require__(/*! raw-loader!./footer.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/footer/footer.component.html"),
+        styles: [__webpack_require__(/*! ./footer.component.scss */ "./src/app/pages/footer/footer.component.scss")]
+    })
+], FooterComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/form-page/form-page.component.scss":
 /*!**********************************************************!*\
   !*** ./src/app/pages/form-page/form-page.component.scss ***!
@@ -869,7 +962,7 @@ GraphPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".wrapper {\n  background-color: black;\n}\n\n.header {\n  padding: 12px 0px;\n}\n\n.header-logo-container {\n  margin-left: -24px;\n}\n\n.header-logo {\n  width: 130px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n}\n\nbutton {\n  background-color: black;\n  color: white;\n  font-size: 117%;\n  width: 100%;\n  height: 100%;\n  letter-spacing: 1px;\n  margin-right: -12px;\n}\n\n@media all and (max-width: 1000px) {\n  .header {\n    padding: 12px 24px;\n  }\n\n  .header-logo-container {\n    margin-left: -24px;\n  }\n\n  .header-logo {\n    width: 130px;\n    -o-object-fit: scale-down;\n       object-fit: scale-down;\n  }\n\n  button {\n    background-color: black;\n    color: white;\n    font-size: 117%;\n    width: 100%;\n    height: 100%;\n    letter-spacing: 1px;\n    margin-right: -12px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxpQkFBQTtBQ0VGOztBRENBO0VBQ0Usa0JBQUE7QUNFRjs7QURDQTtFQUNFLFlBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO0FDRUY7O0FEQ0E7RUFDRSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0FDRUY7O0FEQ0E7RUFDRTtJQUNFLGtCQUFBO0VDRUY7O0VEQUE7SUFDRSxrQkFBQTtFQ0dGOztFREFBO0lBQ0UsWUFBQTtJQUNBLHlCQUFBO09BQUEsc0JBQUE7RUNHRjs7RURBQTtJQUNFLHVCQUFBO0lBQ0EsWUFBQTtJQUNBLGVBQUE7SUFDQSxXQUFBO0lBQ0EsWUFBQTtJQUNBLG1CQUFBO0lBQ0EsbUJBQUE7RUNHRjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi53cmFwcGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4uaGVhZGVyIHtcbiAgcGFkZGluZzogMTJweCAwcHg7XG59XG5cbi5oZWFkZXItbG9nby1jb250YWluZXIge1xuICBtYXJnaW4tbGVmdDogLTI0cHg7XG59XG5cbi5oZWFkZXItbG9nbyB7XG4gIHdpZHRoOiAxMzBweDtcbiAgb2JqZWN0LWZpdDogc2NhbGUtZG93bjtcbn1cblxuYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1zaXplOiAxMTclO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICBtYXJnaW4tcmlnaHQ6IC0xMnB4O1xufVxuXG5AbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLmhlYWRlciB7XG4gICAgcGFkZGluZzogMTJweCAyNHB4O1xuICB9XG4gIC5oZWFkZXItbG9nby1jb250YWluZXIge1xuICAgIG1hcmdpbi1sZWZ0OiAtMjRweDtcbiAgfVxuXG4gIC5oZWFkZXItbG9nbyB7XG4gICAgd2lkdGg6IDEzMHB4O1xuICAgIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG4gIH1cblxuICBidXR0b24ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LXNpemU6IDExNyU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbiAgfVxufVxuIiwiLndyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbn1cblxuLmhlYWRlciB7XG4gIHBhZGRpbmc6IDEycHggMHB4O1xufVxuXG4uaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgbWFyZ2luLWxlZnQ6IC0yNHB4O1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTMwcHg7XG4gIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG59XG5cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtc2l6ZTogMTE3JTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgbGV0dGVyLXNwYWNpbmc6IDFweDtcbiAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbn1cblxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxuXG4gIC5oZWFkZXItbG9nby1jb250YWluZXIge1xuICAgIG1hcmdpbi1sZWZ0OiAtMjRweDtcbiAgfVxuXG4gIC5oZWFkZXItbG9nbyB7XG4gICAgd2lkdGg6IDEzMHB4O1xuICAgIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG4gIH1cblxuICBidXR0b24ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LXNpemU6IDExNyU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbiAgfVxufSJdfQ== */"
+module.exports = ".wrapper {\n  background-color: black;\n}\n\n.header {\n  padding: 12px 0px;\n}\n\n.header-logo-container {\n  margin-left: -24px;\n  cursor: pointer;\n  outline: none;\n}\n\n.header-logo {\n  width: 130px;\n  -o-object-fit: scale-down;\n     object-fit: scale-down;\n}\n\nbutton {\n  background-color: black;\n  color: white;\n  font-size: 117%;\n  width: 100%;\n  height: 100%;\n  letter-spacing: 1px;\n  margin-right: -12px;\n}\n\n@media all and (max-width: 1000px) {\n  .header {\n    padding: 12px 24px;\n  }\n\n  .header-logo-container {\n    margin-left: -24px;\n  }\n\n  .header-logo {\n    width: 130px;\n    -o-object-fit: scale-down;\n       object-fit: scale-down;\n  }\n\n  button {\n    background-color: black;\n    color: white;\n    font-size: 117%;\n    width: 100%;\n    height: 100%;\n    letter-spacing: 1px;\n    margin-right: -12px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxpQkFBQTtBQ0VGOztBRENBO0VBQ0Usa0JBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtBQ0VGOztBRENBO0VBQ0UsWUFBQTtFQUNBLHlCQUFBO0tBQUEsc0JBQUE7QUNFRjs7QURDQTtFQUNFLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUNFRjs7QURDQTtFQUNFO0lBQ0Usa0JBQUE7RUNFRjs7RURBQTtJQUNFLGtCQUFBO0VDR0Y7O0VEQUE7SUFDRSxZQUFBO0lBQ0EseUJBQUE7T0FBQSxzQkFBQTtFQ0dGOztFREFBO0lBQ0UsdUJBQUE7SUFDQSxZQUFBO0lBQ0EsZUFBQTtJQUNBLFdBQUE7SUFDQSxZQUFBO0lBQ0EsbUJBQUE7SUFDQSxtQkFBQTtFQ0dGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbn1cbi5oZWFkZXIge1xuICBwYWRkaW5nOiAxMnB4IDBweDtcbn1cblxuLmhlYWRlci1sb2dvLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1sZWZ0OiAtMjRweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTMwcHg7XG4gIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG59XG5cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtc2l6ZTogMTE3JTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgbGV0dGVyLXNwYWNpbmc6IDFweDtcbiAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbn1cblxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxuICAuaGVhZGVyLWxvZ28tY29udGFpbmVyIHtcbiAgICBtYXJnaW4tbGVmdDogLTI0cHg7XG4gIH1cblxuICAuaGVhZGVyLWxvZ28ge1xuICAgIHdpZHRoOiAxMzBweDtcbiAgICBvYmplY3QtZml0OiBzY2FsZS1kb3duO1xuICB9XG5cbiAgYnV0dG9uIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgZm9udC1zaXplOiAxMTclO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBsZXR0ZXItc3BhY2luZzogMXB4O1xuICAgIG1hcmdpbi1yaWdodDogLTEycHg7XG4gIH1cbn1cbiIsIi53cmFwcGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG5cbi5oZWFkZXIge1xuICBwYWRkaW5nOiAxMnB4IDBweDtcbn1cblxuLmhlYWRlci1sb2dvLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1sZWZ0OiAtMjRweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4uaGVhZGVyLWxvZ28ge1xuICB3aWR0aDogMTMwcHg7XG4gIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG59XG5cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtc2l6ZTogMTE3JTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgbGV0dGVyLXNwYWNpbmc6IDFweDtcbiAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbn1cblxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgfVxuXG4gIC5oZWFkZXItbG9nby1jb250YWluZXIge1xuICAgIG1hcmdpbi1sZWZ0OiAtMjRweDtcbiAgfVxuXG4gIC5oZWFkZXItbG9nbyB7XG4gICAgd2lkdGg6IDEzMHB4O1xuICAgIG9iamVjdC1maXQ6IHNjYWxlLWRvd247XG4gIH1cblxuICBidXR0b24ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LXNpemU6IDExNyU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiAtMTJweDtcbiAgfVxufSJdfQ== */"
 
 /***/ }),
 
@@ -899,6 +992,48 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/pages/header/header.component.scss")]
     })
 ], HeaderComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/main/main.component.scss":
+/*!************************************************!*\
+  !*** ./src/app/pages/main/main.component.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL21haW4vbWFpbi5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/main/main.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/pages/main/main.component.ts ***!
+  \**********************************************/
+/*! exports provided: MainComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainComponent", function() { return MainComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let MainComponent = class MainComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+MainComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-main',
+        template: __webpack_require__(/*! raw-loader!./main.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/main/main.component.html"),
+        styles: [__webpack_require__(/*! ./main.component.scss */ "./src/app/pages/main/main.component.scss")]
+    })
+], MainComponent);
 
 
 
@@ -1112,6 +1247,61 @@ SixthPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/pages/terms/terms.component.scss":
+/*!**************************************************!*\
+  !*** ./src/app/pages/terms/terms.component.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".title {\n  font-size: 3.5em;\n  text-align: center;\n  font-weight: bold;\n  text-transform: uppercase;\n  margin-bottom: 94px;\n}\n\n.back-button {\n  position: absolute;\n  top: 98px;\n  z-index: 9999;\n  color: #ee506f;\n  margin: 0 auto;\n  display: flex;\n}\n\nmat-icon {\n  font-size: 40px;\n  line-height: 40px;\n}\n\n.subtitle {\n  font-size: 1.75em;\n  margin: 24px 0px;\n  font-weight: bolder;\n}\n\n.subtitle-2 {\n  font-size: 1.5em;\n  text-decoration: underline;\n  margin: 12px 0;\n}\n\n@media screen and (max-width: 1000px) {\n  .wrapper {\n    padding: 96px 0px;\n  }\n\n  .title {\n    font-size: 2em;\n    margin-bottom: 24px;\n  }\n\n  .desktop-wrapper {\n    width: calc(100vw - 48px);\n  }\n\n  .back-button {\n    top: 91px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25lbWFuamEvRG9jdW1lbnRzL2FuZ3VsYXItcHJvamVjdHMvdHJhaW4tbWUtb25saW5lL3NyYy9hcHAvcGFnZXMvdGVybXMvdGVybXMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL3Rlcm1zL3Rlcm1zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EseUJBQUE7RUFDQSxtQkFBQTtBQ0NGOztBRENBO0VBQ0Usa0JBQUE7RUFDQSxTQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7RUFDQSxjQUFBO0VBQ0EsYUFBQTtBQ0VGOztBREFBO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0FDR0Y7O0FEREE7RUFDRSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsbUJBQUE7QUNJRjs7QUREQTtFQUNFLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxjQUFBO0FDSUY7O0FEREE7RUFDRTtJQUNFLGlCQUFBO0VDSUY7O0VERkE7SUFDRSxjQUFBO0lBQ0EsbUJBQUE7RUNLRjs7RURIQTtJQUNFLHlCQUFBO0VDTUY7O0VESkE7SUFDRSxTQUFBO0VDT0Y7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Rlcm1zL3Rlcm1zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRpdGxlIHtcbiAgZm9udC1zaXplOiAzLjVlbTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgbWFyZ2luLWJvdHRvbTogOTRweDtcbn1cbi5iYWNrLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA5OHB4O1xuICB6LWluZGV4OiA5OTk5O1xuICBjb2xvcjogI2VlNTA2ZjtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5tYXQtaWNvbiB7XG4gIGZvbnQtc2l6ZTogNDBweDtcbiAgbGluZS1oZWlnaHQ6IDQwcHg7XG59XG4uc3VidGl0bGUge1xuICBmb250LXNpemU6IDEuNzVlbTtcbiAgbWFyZ2luOiAyNHB4IDBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcbn1cblxuLnN1YnRpdGxlLTIge1xuICBmb250LXNpemU6IDEuNWVtO1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgbWFyZ2luOiAxMnB4IDA7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAud3JhcHBlciB7XG4gICAgcGFkZGluZzogOTZweCAwcHg7XG4gIH1cbiAgLnRpdGxlIHtcbiAgICBmb250LXNpemU6IDJlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAyNHB4O1xuICB9XG4gIC5kZXNrdG9wLXdyYXBwZXIge1xuICAgIHdpZHRoOiBjYWxjKDEwMHZ3IC0gNDhweCk7XG4gIH1cbiAgLmJhY2stYnV0dG9uIHtcbiAgICB0b3A6IDkxcHg7XG4gIH1cbn1cbiIsIi50aXRsZSB7XG4gIGZvbnQtc2l6ZTogMy41ZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIG1hcmdpbi1ib3R0b206IDk0cHg7XG59XG5cbi5iYWNrLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA5OHB4O1xuICB6LWluZGV4OiA5OTk5O1xuICBjb2xvcjogI2VlNTA2ZjtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5cbm1hdC1pY29uIHtcbiAgZm9udC1zaXplOiA0MHB4O1xuICBsaW5lLWhlaWdodDogNDBweDtcbn1cblxuLnN1YnRpdGxlIHtcbiAgZm9udC1zaXplOiAxLjc1ZW07XG4gIG1hcmdpbjogMjRweCAwcHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG59XG5cbi5zdWJ0aXRsZS0yIHtcbiAgZm9udC1zaXplOiAxLjVlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG4gIG1hcmdpbjogMTJweCAwO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLndyYXBwZXIge1xuICAgIHBhZGRpbmc6IDk2cHggMHB4O1xuICB9XG5cbiAgLnRpdGxlIHtcbiAgICBmb250LXNpemU6IDJlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAyNHB4O1xuICB9XG5cbiAgLmRlc2t0b3Atd3JhcHBlciB7XG4gICAgd2lkdGg6IGNhbGMoMTAwdncgLSA0OHB4KTtcbiAgfVxuXG4gIC5iYWNrLWJ1dHRvbiB7XG4gICAgdG9wOiA5MXB4O1xuICB9XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/terms/terms.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/pages/terms/terms.component.ts ***!
+  \************************************************/
+/*! exports provided: TermsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsComponent", function() { return TermsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_texts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/texts */ "./src/app/texts.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let TermsComponent = class TermsComponent {
+    constructor(router) {
+        this.router = router;
+        this.termsTexts = src_app_texts__WEBPACK_IMPORTED_MODULE_2__["TERMS"];
+        this.cookiesTitle = src_app_texts__WEBPACK_IMPORTED_MODULE_2__["COOKIES_TITLE"];
+    }
+    ngOnInit() { }
+    goBack() {
+        this.router.navigate(['']);
+    }
+};
+TermsComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+TermsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-terms',
+        template: __webpack_require__(/*! raw-loader!./terms.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/terms/terms.component.html"),
+        styles: [__webpack_require__(/*! ./terms.component.scss */ "./src/app/pages/terms/terms.component.scss")]
+    })
+], TermsComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/testimonials/testimonials.component.scss":
 /*!****************************************************************!*\
   !*** ./src/app/pages/testimonials/testimonials.component.scss ***!
@@ -1264,6 +1454,90 @@ MailService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], MailService);
 
+
+
+/***/ }),
+
+/***/ "./src/app/texts.ts":
+/*!**************************!*\
+  !*** ./src/app/texts.ts ***!
+  \**************************/
+/*! exports provided: COOKIES_TITLE, TERMS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COOKIES_TITLE", function() { return COOKIES_TITLE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TERMS", function() { return TERMS; });
+const COOKIES_TITLE = `Kolačići (cookies)`;
+const TERMS = [
+    {
+        title: `Sadržaj i Usluga sajta`,
+        text: `Usluga koju pruža Sajt „strongmanmetod.online“ je online personalni trening koji se izrađuje prema Vašem zahtevu a na
+    osnovu ličnih podataka koje sami unesete. Informacije koje pružate kada koristite sajt treba da su tačne i
+    potpune, kao i e-mail adresa, preko koje ostvarujemo komunikaciju i otvaramo Vam nalog na Trainerize aplikacije preko koje dobijate
+    trening i komunicirate sa Strongmanom u vezi treninga
+    , putem e-mail-a možete dobiti i dodatne
+    korisne informacije. Cena personalnog treninga je dostupna i vidljiva na
+    sajtu, a plaćanje je moguće vršiti jednokratno(unapred) ili se možete pretplatiti na personalni trening, odnosno uplatu vršiti mesečno.
+    Klijent nema pravo da štampa i kopira informacije sa sajta na neki drugi sajt ili za neku drugu upotrebu osim lične.
+    Sajt ne bi trebalo da koriste maloletna lica, odnosno mlađi od 18 godina, u tom slučaju treba da postoji
+    odobrenje odgovornog punoletnog lica.
+    Sajt ne bi trebalo da koriste lica koja imaju zdravstvene ili nutritivne probleme, u tom slučaju
+    treba konsultovati svog lekara i javiti se putem mejla timu korisničkog servisa sajta.`
+    },
+    {
+        title: `Politika privatnosti`,
+        subtexts: [
+            {
+                title: `Zaštita privatnosti korisnika`,
+                text: `Svako prikupljanje, obradu i čuvanje Vaših podataka uradićemo u skladu
+        sa važećim propisima Republike Srbije i novom evropskom regulativom o zaštiti podataka o ličnosti.
+        U ime Sajta "dijeta.info“ obavezujemo se da ćemo čuvati privatnost svih naših kupaca. Prikupljamo
+        samo neophodne, osnovne podatke o korisnicima i podatke neophodne za poslovanje i informisanje korisnika
+        u skladu sa dobrim poslovnim običajima i u cilju pružanja kvalitetne usluge. Svi podaci o korisnicima se
+        strogo čuvaju i dostupni su samo zaposlenima kojima su ti podaci nužni za obavljanje posla. Svi zaposleni na
+        Sajtu „dijeta.info“ odgovorni su za poštovanje načela zaštite privatnosti.`
+            },
+            {
+                title: `Zaštita poverljivih podataka`,
+                text: `Ukoliko odlučite da platite online našu uslugu, najvažnije je znati da plaćanje na našem
+        Internet sajtu obavljate na siguran način, bez ikakvog rizika za Vas i bez mogućnosti
+         zloupotrebe podataka i Vaše platne kartice, (VISA, MasterCard i Maestro) Plaćanje platnim
+          karticama se obavlja preko procesora 2Checkout.com Inc. (Ohio, USA) ili preko PayPal-a, po vašem izboru.
+        Prilikom plaćanja karticom putem interneta, unos podataka o kartici se vrši na zaštićenoj stranici
+        2Checkout.com Inc. (Ohio, USA). Sigurnost podataka prilikom plaćanja karticama, garantuje procesor
+        platnih kartica na čijim stranicama se obavlja ceo proces plaćanja. Ni jednog trenutka Sajt „dijeta.info"
+        nema pristup podacima sa Vaše platne kartice, pa samim tim ni ne može biti odgovoran za njihovu eventualnu zloupotrebu.
+        Prilikom unošenja podataka o platnoj kartici, poverljive informacija se prenose putem javne mreže u zaštićenoj
+        (kriptovanoj) formi upotrebom SSL protokola.
+        Sigurnost podataka prilikom kupovine, garantuje procesor platnih kartica, 2Checkout.com Inc. (Ohio, USA) ili PayPal,
+        pa se tako kompletan proces naplate obavlja na stranicama procesora plaćanja. Ni jednog trenutka podaci o platnoj
+        kartici nisu dostupni našem sistemu.
+        Lični podaci koje budete unosili u odgovarajuće forme koristiće se isključivo u svrhu evidentiranja radi izrade plana
+        ishrane i neće se prosleđivati niti ustupati drugom licu ili instituciji.
+        Svi podaci koje nam ostavljate tokom procesa popunjavanja ankete su samo za našu internu upotrebu, a sa svrhom
+        isporučivanja zatraženog proizvoda, i neće biti nikada predočena trećim licima osim u slučaju sudske odluke nadležnog suda.`
+            },
+            {
+                title: COOKIES_TITLE,
+                text: `Kolačići su tekstualne datoteke smeštene na vaš računar za prikupljanje standardih
+        informacija internet dnevnika i informacije o ponašanju posetioca. Informacije se koriste
+        za praćenje korišćenja web stranice i izradu statističkih izveštaja o web aktivnosti. Za dodatne
+        informacije o kolačićima posetite www.aboutcookies.org ili www.allaboutcookies.org. Možete podesiti
+        vaš browser da ne prihvata kolačiće i gore navedene web stranice će vam reći kako ukloniti kolačiće iz
+        vašeg browser-a. Međutim, u nekoliko slučajeva neke od naših web stranica možda neće funkcionisati ako
+        uklonite kolačiće iz vašeg browsera.
+        Korišćenje naših servisa podrazumeva saglasnost korisnika sa svim navedenim na ovoj strani. Sajt „dijeta.info"
+        se obavezuje da će se pridržavati svega navedenog, a sve promene uslova postaju važeće tek nakon objavljivanja
+        na ovoj strani. Sajt „dijeta.info" zadržava pravo da unosi izmene u ova Pravila zaštite privatnosti. U slučaju da
+        sajt „dijeta.info“ unese materijalnu izmenu u ova Pravila zaštite privatnosti, ona će biti navedena ovde. Preporučujemo
+        vam da redovno posećujete ovu stranicu jer ako nastavite da koristite ovaj Sajt nakon unošenja bilo kakvih izmena u
+        Pravila zaštite privatnosti, na taj način izražavate svoju saglasnost sa unetim izmenama.`
+            }
+        ]
+    }
+];
 
 
 /***/ }),
